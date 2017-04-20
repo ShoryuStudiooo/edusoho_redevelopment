@@ -24,409 +24,303 @@ class __TwigTemplate_f673fcc295c5db7b9822bb300a413f81765c59f9dadccc187c620bf3d0c
         $context["groups"] = $this->env->getExtension('Topxia\WebBundle\Twig\Extension\DataExtension')->getData("HotGroup", array("count" => 6));
         // line 4
         $context["reviews"] = $this->env->getExtension('Topxia\WebBundle\Twig\Extension\DataExtension')->getData("LatestCourseReviews", array("count" => 4));
-        // line 5
-        echo "<section class=\"dynamic-section ";
-        echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "background", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "background", array()), "")) : ("")), "html", null, true);
-        echo "\">
-  <div class=\"container\">
-    <div class=\"text-line gray\">
-      <h5><span>";
+        // line 6
+        echo "  ";
+        // line 7
+        echo "    ";
         // line 8
-        echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "title", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "title", array()), $this->getAttribute((isset($context["config"]) ? $context["config"] : null), "defaultTitle", array()))) : ($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "defaultTitle", array()))), "html", null, true);
-        echo "</span><div class=\"line\"></div></h5>
-      <div class=\"subtitle\">";
+        echo "      ";
         // line 9
-        echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "subTitle", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "subTitle", array()), $this->getAttribute((isset($context["config"]) ? $context["config"] : null), "defaultSubTitle", array()))) : ($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "defaultSubTitle", array()))), "html", null, true);
-        echo "</div>
-    </div>
-    <div class=\"dynamic-section-main row\">
-      ";
+        echo "      ";
+        // line 10
+        echo "    ";
+        // line 11
+        echo "    ";
         // line 12
-        if (($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "select1", array()) == "checked")) {
-            // line 13
-            echo "      <div class=\"col-md-6\">
-        <div class=\"panel panel-default index-group\">
-          <div class=\"panel-heading\">
-            <a href=\"";
-            // line 16
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("group");
-            echo "\" class=\"more\"><i class=\"es-icon es-icon-morehoriz\"></i></a>
-            <h3 class=\"panel-title\"><i class=\"es-icon es-icon-whatshot pull-left\"></i>";
-            // line 17
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("热门小组"), "html", null, true);
-            echo "</h3>
-          </div>
-          <div class=\"panel-body row\">
-            <div class=\"media-group-list\">
-              ";
-            // line 21
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["groups"]) ? $context["groups"] : null));
-            foreach ($context['_seq'] as $context["_key"] => $context["group"]) {
-                // line 22
-                echo "                <div class=\"media media-group col-md-6 col-sm-4\">
-                  <div class=\"media-left\">
-                    <a href=\"";
-                // line 24
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("group_show", array("id" => $this->getAttribute($context["group"], "id", array()))), "html", null, true);
-                echo "\">
-                      ";
-                // line 25
-                echo $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->makeLazyImg($this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->getFpath($this->getAttribute($context["group"], "logo", array()), "group.png"), "avatar-square-md", $this->getAttribute($context["group"], "title", array()), "group.png");
-                echo "
-                    </a>
-                  </div>
-                  <div class=\"media-body\">
-                    <div class=\"title\">
-                      <a class=\"link-light\" href=\"";
-                // line 30
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("group_show", array("id" => $this->getAttribute($context["group"], "id", array()))), "html", null, true);
-                echo "\">
-                        ";
-                // line 31
-                echo twig_escape_filter($this->env, $this->getAttribute($context["group"], "title", array()), "html", null, true);
-                echo "
-                      </a>
-                    </div>
-                    <div class=\"metas\">
-                      <span><i class=\"es-icon es-icon-people\"></i>";
-                // line 35
-                echo twig_escape_filter($this->env, $this->getAttribute($context["group"], "memberNum", array()), "html", null, true);
-                echo "</span>
-                      <span><i class=\"es-icon es-icon-textsms\"></i>";
-                // line 36
-                echo twig_escape_filter($this->env, $this->getAttribute($context["group"], "threadNum", array()), "html", null, true);
-                echo "</span>
-                    </div>
-                  </div>
-                </div>
-              ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['group'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 41
-            echo "            </div>
-          </div>
-        </div>
-      </div>
-      ";
-        }
+        echo "      ";
+        // line 13
+        echo "      ";
+        // line 14
+        echo "        ";
+        // line 15
+        echo "          ";
+        // line 16
+        echo "            ";
+        // line 17
+        echo "            ";
+        // line 18
+        echo "          ";
+        // line 19
+        echo "          ";
+        // line 20
+        echo "            ";
+        // line 21
+        echo "              ";
+        // line 22
+        echo "                ";
+        // line 23
+        echo "                  ";
+        // line 24
+        echo "                    ";
+        // line 25
+        echo "                      ";
+        // line 26
+        echo "                    ";
+        // line 27
+        echo "                  ";
+        // line 28
+        echo "                  ";
+        // line 29
+        echo "                    ";
+        // line 30
+        echo "                      ";
+        // line 31
+        echo "                        ";
+        // line 32
+        echo "                      ";
+        // line 33
+        echo "                    ";
+        // line 34
+        echo "                    ";
+        // line 35
+        echo "                      ";
+        // line 36
+        echo "                      ";
+        // line 37
+        echo "                    ";
+        // line 38
+        echo "                  ";
+        // line 39
+        echo "                ";
+        // line 40
+        echo "              ";
+        // line 41
+        echo "            ";
+        // line 42
+        echo "          ";
+        // line 43
+        echo "        ";
+        // line 44
+        echo "      ";
+        // line 45
+        echo "      ";
         // line 46
         echo "      ";
-        if (($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "select2", array()) == "checked")) {
-            // line 47
-            echo "      <div class=\"col-md-6\">
-        <div class=\"panel panel-default index-article\">
-          <div class=\"panel-heading\">
-            <h3 class=\"panel-title\">
-              ";
-            // line 51
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("最新%article_name%", array("%article_name%" => _twig_default_filter($this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->getSetting("article.name"), $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("资讯")))), "html", null, true);
-            echo "
-              <a class=\"more\" href=\"";
-            // line 52
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("article_show");
-            echo "\"><i class=\"es-icon es-icon-morehoriz\"></i></a>
-            </h3>
-          </div>
-          <div class=\"panel-body clearfix\">
-            ";
-            // line 56
-            $context["featuredArticles"] = $this->env->getExtension('Topxia\WebBundle\Twig\Extension\DataExtension')->getData("LatestArticles", array("type" => "featured", "count" => 2));
-            // line 57
-            echo "            ";
-            if ((isset($context["featuredArticles"]) ? $context["featuredArticles"] : null)) {
-                // line 58
-                echo "            <ul class=\"index-recommend-aricle clearfix\">
-              ";
-                // line 59
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable((isset($context["featuredArticles"]) ? $context["featuredArticles"] : null));
-                $context['loop'] = array(
-                  'parent' => $context['_parent'],
-                  'index0' => 0,
-                  'index'  => 1,
-                  'first'  => true,
-                );
-                if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof Countable)) {
-                    $length = count($context['_seq']);
-                    $context['loop']['revindex0'] = $length - 1;
-                    $context['loop']['revindex'] = $length;
-                    $context['loop']['length'] = $length;
-                    $context['loop']['last'] = 1 === $length;
-                }
-                foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-                    // line 60
-                    echo "                <li class=\"";
-                    if (($this->getAttribute($context["loop"], "index", array()) == 2)) {
-                        echo "last";
-                    }
-                    echo "\">
-                  <a href=\"";
-                    // line 61
-                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("article_detail", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
-                    echo "\">
-                    ";
-                    // line 62
-                    $context["defaultImg"] = (("../../v2/img/article/article_banner_" . $this->getAttribute($context["loop"], "index", array())) . ".jpg");
-                    // line 63
-                    echo "                    ";
-                    echo $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->makeLazyImg($this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->getFpath($this->getAttribute($context["article"], "thumb", array()), (isset($context["defaultImg"]) ? $context["defaultImg"] : null)), "img-responsive", $this->getAttribute($context["article"], "title", array()), (isset($context["defaultImg"]) ? $context["defaultImg"] : null));
-                    echo "
-                    <div class=\"image-overlay\"></div>
-                    <div class=\"title\">";
-                    // line 65
-                    echo twig_escape_filter($this->env, $this->getAttribute($context["article"], "title", array()), "html", null, true);
-                    echo "</div>
-                  </a>
-                </li>
-              ";
-                    ++$context['loop']['index0'];
-                    ++$context['loop']['index'];
-                    $context['loop']['first'] = false;
-                    if (isset($context['loop']['length'])) {
-                        --$context['loop']['revindex0'];
-                        --$context['loop']['revindex'];
-                        $context['loop']['last'] = 0 === $context['loop']['revindex0'];
-                    }
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 69
-                echo "            </ul>
-            ";
-            }
-            // line 71
-            echo "            <ul class=\"index-new-article ";
-            if ( !((array_key_exists("featuredArticles", $context)) ? (_twig_default_filter((isset($context["featuredArticles"]) ? $context["featuredArticles"] : null), false)) : (false))) {
-                echo "full";
-            }
-            echo "\">
-              ";
-            // line 72
-            $context["articles"] = $this->env->getExtension('Topxia\WebBundle\Twig\Extension\DataExtension')->getData("LatestArticles", array("count" => 5));
-            // line 73
-            echo "              ";
-            if ((isset($context["articles"]) ? $context["articles"] : null)) {
-                // line 74
-                echo "                ";
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) ? $context["articles"] : null));
-                $context['loop'] = array(
-                  'parent' => $context['_parent'],
-                  'index0' => 0,
-                  'index'  => 1,
-                  'first'  => true,
-                );
-                if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof Countable)) {
-                    $length = count($context['_seq']);
-                    $context['loop']['revindex0'] = $length - 1;
-                    $context['loop']['revindex'] = $length;
-                    $context['loop']['length'] = $length;
-                    $context['loop']['last'] = 1 === $length;
-                }
-                foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-                    // line 75
-                    echo "                  <li class=\"";
-                    if (($this->getAttribute($context["loop"], "index", array()) == 5)) {
-                        echo "last";
-                    }
-                    echo " clearfix\"><i class=\"es-icon es-icon-dot color-primary mrs\"></i><a class=\"link-dark\" href=\"";
-                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("article_detail", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
-                    echo "\" title=\"";
-                    echo twig_escape_filter($this->env, $this->getAttribute($context["article"], "title", array()), "html", null, true);
-                    echo "\">";
-                    echo twig_escape_filter($this->env, $this->getAttribute($context["article"], "title", array()), "html", null, true);
-                    echo "</a> <span class=\"date\">";
-                    echo twig_escape_filter($this->env, $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->smarttimeFilter($this->getAttribute($context["article"], "createdTime", array())), "html", null, true);
-                    echo "</span></li>
-                ";
-                    ++$context['loop']['index0'];
-                    ++$context['loop']['index'];
-                    $context['loop']['first'] = false;
-                    if (isset($context['loop']['length'])) {
-                        --$context['loop']['revindex0'];
-                        --$context['loop']['revindex'];
-                        $context['loop']['last'] = 0 === $context['loop']['revindex0'];
-                    }
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 77
-                echo "              ";
-            }
-            // line 78
-            echo "            </ul>
-          </div>
-        </div>
-      </div>
-      ";
-        }
+        // line 47
+        echo "      ";
+        // line 48
+        echo "        ";
+        // line 49
+        echo "          ";
+        // line 50
+        echo "            ";
+        // line 51
+        echo "              ";
+        // line 52
+        echo "              ";
+        // line 53
+        echo "            ";
+        // line 54
+        echo "          ";
+        // line 55
+        echo "          ";
+        // line 56
+        echo "            ";
+        // line 57
+        echo "            ";
+        // line 58
+        echo "            ";
+        // line 59
+        echo "              ";
+        // line 60
+        echo "                ";
+        // line 61
+        echo "                  ";
+        // line 62
+        echo "                    ";
+        // line 63
+        echo "                    ";
+        // line 64
+        echo "                    ";
+        // line 65
+        echo "                    ";
+        // line 66
+        echo "                  ";
+        // line 67
+        echo "                ";
+        // line 68
+        echo "              ";
+        // line 69
+        echo "            ";
+        // line 70
+        echo "            ";
+        // line 71
+        echo "            ";
+        // line 72
+        echo "              ";
+        // line 73
+        echo "              ";
+        // line 74
+        echo "                ";
+        // line 75
+        echo "                  ";
+        // line 76
+        echo "                ";
+        // line 77
+        echo "              ";
+        // line 78
+        echo "            ";
+        // line 79
+        echo "          ";
+        // line 80
+        echo "        ";
+        // line 81
+        echo "      ";
+        // line 82
+        echo "      ";
         // line 83
         echo "      ";
-        if (($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "select3", array()) == "checked")) {
-            // line 84
-            echo "      <div class=\"col-md-6\">
-        <div class=\"panel panel-default index-evaluate\">
-          <div class=\"panel-heading\">
-            <h3 class=\"panel-title\">
-              ";
-            // line 88
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("学员评价"), "html", null, true);
-            echo "
-            </h3>
-          </div>
-          <div class=\"panel-body\">
-            ";
-            // line 92
-            if ((isset($context["reviews"]) ? $context["reviews"] : null)) {
-                // line 93
-                echo "              ";
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable((isset($context["reviews"]) ? $context["reviews"] : null));
-                foreach ($context['_seq'] as $context["_key"] => $context["review"]) {
-                    // line 94
-                    echo "              ";
-                    $context["author"] = (($this->getAttribute($context["review"], "User", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($context["review"], "User", array()), null)) : (null));
-                    // line 95
-                    echo "              ";
-                    $context["course"] = (($this->getAttribute($context["review"], "course", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($context["review"], "course", array()), null)) : (null));
-                    // line 96
-                    echo "              ";
-                    if (((isset($context["author"]) ? $context["author"] : null) && (isset($context["course"]) ? $context["course"] : null))) {
-                        // line 97
-                        echo "            <div class=\"media media-dynamic\">
-              <div class=\"media-left\">
-              ";
-                        // line 99
-                        echo $context["web_macro"]->getuser_avatar((isset($context["author"]) ? $context["author"] : null), "", "avatar-sm", true);
-                        echo "
-              </div>
-              <div class=\"media-body\">
-                <div class=\"title text-sm\">
-                  ";
-                        // line 103
-                        echo $context["web_macro"]->getuser_link((isset($context["author"]) ? $context["author"] : null), "link-light");
-                        echo "
-                  <span class=\"score\">";
-                        // line 104
-                        echo $context["web_macro"]->getstar($this->getAttribute($context["review"], "rating", array()));
-                        echo "</span>
-                  ";
-                        // line 105
-                        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("发布于"), "html", null, true);
-                        echo " <a class=\"link-light\" href=\"";
-                        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("course_show", array("id" => $this->getAttribute((isset($context["course"]) ? $context["course"] : null), "id", array()))), "html", null, true);
-                        echo "\">《";
-                        echo $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->plainTextFilter($this->getAttribute((isset($context["course"]) ? $context["course"] : null), "title", array()), 10);
-                        echo "》</a>
-                </div>
-                <div class=\"content gray-darker\">
-                  ";
-                        // line 108
-                        echo $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->plainTextFilter($this->getAttribute($context["review"], "content", array()), 30);
-                        echo "
-                </div>
-                <span class=\"date\">";
-                        // line 110
-                        echo twig_escape_filter($this->env, $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->smarttimeFilter($this->getAttribute($context["review"], "createdTime", array())), "html", null, true);
-                        echo "</span>
-              </div>
-            </div>
-            ";
-                    }
-                    // line 114
-                    echo "            ";
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['review'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 115
-                echo "            ";
-            } else {
-                // line 116
-                echo "              <div class=\"empty\">";
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("还没有评价"), "html", null, true);
-                echo "</div>
-            ";
-            }
-            // line 118
-            echo "          </div>
-        </div>
-      </div>
-      ";
-        }
+        // line 84
+        echo "      ";
+        // line 85
+        echo "        ";
+        // line 86
+        echo "          ";
+        // line 87
+        echo "            ";
+        // line 88
+        echo "              ";
+        // line 89
+        echo "            ";
+        // line 90
+        echo "          ";
+        // line 91
+        echo "          ";
+        // line 92
+        echo "            ";
+        // line 93
+        echo "              ";
+        // line 94
+        echo "              ";
+        // line 95
+        echo "              ";
+        // line 96
+        echo "              ";
+        // line 97
+        echo "            ";
+        // line 98
+        echo "              ";
+        // line 99
+        echo "              ";
+        // line 100
+        echo "              ";
+        // line 101
+        echo "              ";
+        // line 102
+        echo "                ";
+        // line 103
+        echo "                  ";
+        // line 104
+        echo "                  ";
+        // line 105
+        echo "                  ";
+        // line 106
+        echo "                ";
+        // line 107
+        echo "                ";
+        // line 108
+        echo "                  ";
+        // line 109
+        echo "                ";
+        // line 110
+        echo "                ";
+        // line 111
+        echo "              ";
+        // line 112
+        echo "            ";
+        // line 113
+        echo "            ";
+        // line 114
+        echo "            ";
+        // line 115
+        echo "            ";
+        // line 116
+        echo "              ";
+        // line 117
+        echo "            ";
+        // line 118
+        echo "          ";
+        // line 119
+        echo "        ";
+        // line 120
+        echo "      ";
+        // line 121
+        echo "      ";
         // line 122
         echo "      ";
-        if (($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "select4", array()) == "checked")) {
-            // line 123
-            echo "      <div class=\"col-md-6\">
-        <div class=\"panel panel-default index-dynamic\">
-          <div class=\"panel-heading\">
-            <h3 class=\"panel-title\">
-              ";
-            // line 127
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("学员动态"), "html", null, true);
-            echo "
-            </h3>
-          </div>
-          <div class=\"panel-body\">
+        // line 123
+        echo "      ";
+        // line 124
+        echo "        ";
+        // line 125
+        echo "          ";
+        // line 126
+        echo "            ";
+        // line 127
+        echo "              ";
+        // line 128
+        echo "            ";
+        // line 129
+        echo "          ";
+        // line 130
+        echo "          ";
+        // line 131
+        echo "            ";
+        // line 132
+        echo "
             ";
-            // line 131
-            $context["statuses"] = $this->env->getExtension('Topxia\WebBundle\Twig\Extension\DataExtension')->getData("LatestStatuses", array("mode" => "simple", "count" => 4, "private" => 0));
-            // line 132
-            echo "
-            ";
-            // line 133
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["statuses"]) ? $context["statuses"] : null));
-            foreach ($context['_seq'] as $context["_key"] => $context["status"]) {
-                // line 134
-                echo "              <div class=\"media media-dynamic\">
-                <div class=\"media-left\">
-                  ";
-                // line 136
-                echo $context["web_macro"]->getuser_avatar($this->getAttribute($context["status"], "user", array()), "", "avatar-sm");
-                echo "
-                </div>
-                <div class=\"media-body\">
-                  <div class=\"title\">
-                    ";
-                // line 140
-                echo $context["web_macro"]->getuser_link($this->getAttribute($context["status"], "user", array()));
-                echo "
-                  </div>
-                  <div class=\"content\">
-                    ";
-                // line 143
-                echo $this->getAttribute($context["status"], "message", array());
-                echo "
-                  </div>
-                  <span class=\"date\">";
-                // line 145
-                echo twig_escape_filter($this->env, $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->smarttimeFilter($this->getAttribute($context["status"], "createdTime", array())), "html", null, true);
-                echo "</span>
-                </div>
-              </div>
-            ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['status'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 149
-            echo "          </div>
-        </div>
-      </div>
-      ";
-        }
+        // line 134
+        echo "              ";
+        // line 135
+        echo "                ";
+        // line 136
+        echo "                  ";
+        // line 137
+        echo "                ";
+        // line 138
+        echo "                ";
+        // line 139
+        echo "                  ";
+        // line 140
+        echo "                    ";
+        // line 141
+        echo "                  ";
+        // line 142
+        echo "                  ";
+        // line 143
+        echo "                    ";
+        // line 144
+        echo "                  ";
+        // line 145
+        echo "                  ";
+        // line 146
+        echo "                ";
+        // line 147
+        echo "              ";
+        // line 148
+        echo "            ";
+        // line 149
+        echo "          ";
+        // line 150
+        echo "        ";
+        // line 151
+        echo "      ";
+        // line 152
+        echo "      ";
         // line 153
-        echo "    </div>
-  </div>
-</section>
-";
+        echo "    ";
+        // line 154
+        echo "  ";
     }
 
     public function getTemplateName()
@@ -441,7 +335,7 @@ class __TwigTemplate_f673fcc295c5db7b9822bb300a413f81765c59f9dadccc187c620bf3d0c
 
     public function getDebugInfo()
     {
-        return array (  426 => 153,  420 => 149,  410 => 145,  405 => 143,  399 => 140,  392 => 136,  388 => 134,  384 => 133,  381 => 132,  379 => 131,  372 => 127,  366 => 123,  363 => 122,  357 => 118,  351 => 116,  348 => 115,  342 => 114,  335 => 110,  330 => 108,  320 => 105,  316 => 104,  312 => 103,  305 => 99,  301 => 97,  298 => 96,  295 => 95,  292 => 94,  287 => 93,  285 => 92,  278 => 88,  272 => 84,  269 => 83,  262 => 78,  259 => 77,  232 => 75,  214 => 74,  211 => 73,  209 => 72,  202 => 71,  198 => 69,  180 => 65,  174 => 63,  172 => 62,  168 => 61,  161 => 60,  144 => 59,  141 => 58,  138 => 57,  136 => 56,  129 => 52,  125 => 51,  119 => 47,  116 => 46,  109 => 41,  98 => 36,  94 => 35,  87 => 31,  83 => 30,  75 => 25,  71 => 24,  67 => 22,  63 => 21,  56 => 17,  52 => 16,  47 => 13,  45 => 12,  39 => 9,  35 => 8,  28 => 5,  26 => 4,  24 => 3,  21 => 2,  19 => 1,);
+        return array (  323 => 154,  321 => 153,  319 => 152,  317 => 151,  315 => 150,  313 => 149,  311 => 148,  309 => 147,  307 => 146,  305 => 145,  303 => 144,  301 => 143,  299 => 142,  297 => 141,  295 => 140,  293 => 139,  291 => 138,  289 => 137,  287 => 136,  285 => 135,  283 => 134,  280 => 132,  278 => 131,  276 => 130,  274 => 129,  272 => 128,  270 => 127,  268 => 126,  266 => 125,  264 => 124,  262 => 123,  260 => 122,  258 => 121,  256 => 120,  254 => 119,  252 => 118,  250 => 117,  248 => 116,  246 => 115,  244 => 114,  242 => 113,  240 => 112,  238 => 111,  236 => 110,  234 => 109,  232 => 108,  230 => 107,  228 => 106,  226 => 105,  224 => 104,  222 => 103,  220 => 102,  218 => 101,  216 => 100,  214 => 99,  212 => 98,  210 => 97,  208 => 96,  206 => 95,  204 => 94,  202 => 93,  200 => 92,  198 => 91,  196 => 90,  194 => 89,  192 => 88,  190 => 87,  188 => 86,  186 => 85,  184 => 84,  182 => 83,  180 => 82,  178 => 81,  176 => 80,  174 => 79,  172 => 78,  170 => 77,  168 => 76,  166 => 75,  164 => 74,  162 => 73,  160 => 72,  158 => 71,  156 => 70,  154 => 69,  152 => 68,  150 => 67,  148 => 66,  146 => 65,  144 => 64,  142 => 63,  140 => 62,  138 => 61,  136 => 60,  134 => 59,  132 => 58,  130 => 57,  128 => 56,  126 => 55,  124 => 54,  122 => 53,  120 => 52,  118 => 51,  116 => 50,  114 => 49,  112 => 48,  110 => 47,  108 => 46,  106 => 45,  104 => 44,  102 => 43,  100 => 42,  98 => 41,  96 => 40,  94 => 39,  92 => 38,  90 => 37,  88 => 36,  86 => 35,  84 => 34,  82 => 33,  80 => 32,  78 => 31,  76 => 30,  74 => 29,  72 => 28,  70 => 27,  68 => 26,  66 => 25,  64 => 24,  62 => 23,  60 => 22,  58 => 21,  56 => 20,  54 => 19,  52 => 18,  50 => 17,  48 => 16,  46 => 15,  44 => 14,  42 => 13,  40 => 12,  38 => 11,  36 => 10,  34 => 9,  32 => 8,  30 => 7,  28 => 6,  26 => 4,  24 => 3,  21 => 2,  19 => 1,);
     }
 
     public function getSource()
