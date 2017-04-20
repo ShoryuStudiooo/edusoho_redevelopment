@@ -114,44 +114,22 @@ class __TwigTemplate_a92a31a10f620471856d715681badb147d5520a2bed414c33cfc44c39b4
             // line 45
             echo "
     ";
-            // line 46
-            if ((twig_in_filter("full", (isset($context["shows"]) ? $context["shows"] : null)) || twig_in_filter("price", (isset($context["shows"]) ? $context["shows"] : null)))) {
-                // line 47
-                echo "      <span class=\"price\">
-        ";
-                // line 48
-                if (($this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->getSetting("coin.coin_enabled") && ($this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->getSetting("coin.price_type") == "Coin"))) {
-                    // line 49
-                    echo "          ";
-                    if (($this->getAttribute((isset($context["course"]) ? $context["course"] : null), "price", array()) > 0)) {
-                        echo " ";
-                        echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["course"]) ? $context["course"] : null), "price", array()) * $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->getSetting("coin.cash_rate")), "html", null, true);
-                        echo twig_escape_filter($this->env, $this->env->getExtension('Topxia\WebBundle\Twig\Extension\WebExtension')->getSetting("coin.coin_name", $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("虚拟币")), "html", null, true);
-                        echo " ";
-                    } else {
-                        echo " <span class=\"text-success\">";
-                        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("免费"), "html", null, true);
-                        echo "</span> ";
-                    }
-                    // line 50
-                    echo "        ";
-                } else {
-                    // line 51
-                    echo "          ";
-                    if (($this->getAttribute((isset($context["course"]) ? $context["course"] : null), "price", array()) > 0)) {
-                        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("%price%元", array("%price%" => $this->getAttribute((isset($context["course"]) ? $context["course"] : null), "price", array()))), "html", null, true);
-                    } else {
-                        echo " <span class=\"text-success\">";
-                        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("免费"), "html", null, true);
-                        echo "</span> ";
-                    }
-                    echo " 
-        ";
-                }
-                // line 53
-                echo "      </span>
-    ";
-            }
+            // line 47
+            echo "      ";
+            // line 48
+            echo "        ";
+            // line 49
+            echo "          ";
+            // line 50
+            echo "        ";
+            // line 51
+            echo "          ";
+            // line 52
+            echo "        ";
+            // line 53
+            echo "      ";
+            // line 54
+            echo "    ";
             // line 55
             echo "
     ";
@@ -196,7 +174,7 @@ class __TwigTemplate_a92a31a10f620471856d715681badb147d5520a2bed414c33cfc44c39b4
 
     public function getDebugInfo()
     {
-        return array (  184 => 65,  180 => 63,  177 => 62,  171 => 60,  164 => 58,  161 => 57,  159 => 56,  156 => 55,  152 => 53,  140 => 51,  137 => 50,  125 => 49,  123 => 48,  120 => 47,  118 => 46,  115 => 45,  111 => 43,  106 => 40,  100 => 38,  94 => 36,  92 => 35,  88 => 33,  86 => 32,  83 => 31,  80 => 30,  74 => 28,  66 => 26,  63 => 25,  61 => 24,  58 => 23,  55 => 22,  49 => 20,  41 => 18,  38 => 17,  36 => 16,  33 => 15,  31 => 14,  26 => 11,  24 => 10,  22 => 9,  19 => 8,);
+        return array (  162 => 65,  158 => 63,  155 => 62,  149 => 60,  142 => 58,  139 => 57,  137 => 56,  134 => 55,  132 => 54,  130 => 53,  128 => 52,  126 => 51,  124 => 50,  122 => 49,  120 => 48,  118 => 47,  115 => 45,  111 => 43,  106 => 40,  100 => 38,  94 => 36,  92 => 35,  88 => 33,  86 => 32,  83 => 31,  80 => 30,  74 => 28,  66 => 26,  63 => 25,  61 => 24,  58 => 23,  55 => 22,  49 => 20,  41 => 18,  38 => 17,  36 => 16,  33 => 15,  31 => 14,  26 => 11,  24 => 10,  22 => 9,  19 => 8,);
     }
 
     public function getSource()
