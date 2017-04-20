@@ -23,10 +23,10 @@ class __TwigTemplate_545e8aab116a8ac74022c5df45d6c77e6c3031f7b0a21493d43bad64332
         } else {
             // line 4
             echo "\t";
-            $asm89CacheStrategy3 = $this->env->getExtension('asm89_cache')->getCacheStrategy();
-            $asm89Key3 = $asm89CacheStrategy3->generateKey("layout/announcement", 600            );
-            $asm89CacheBody3 = $asm89CacheStrategy3->fetchBlock($asm89Key3);
-            if ($asm89CacheBody3 === false) {
+            $asm89CacheStrategy1 = $this->env->getExtension('asm89_cache')->getCacheStrategy();
+            $asm89Key1 = $asm89CacheStrategy1->generateKey("layout/announcement", 600            );
+            $asm89CacheBody1 = $asm89CacheStrategy1->fetchBlock($asm89Key1);
+            if ($asm89CacheBody1 === false) {
                 ob_start();
                     // line 5
                     echo "\t\t";
@@ -34,10 +34,10 @@ class __TwigTemplate_545e8aab116a8ac74022c5df45d6c77e6c3031f7b0a21493d43bad64332
                     // line 6
                     echo "\t";
                 
-                $asm89CacheBody3 = ob_get_clean();
-                $asm89CacheStrategy3->saveBlock($asm89Key3, $asm89CacheBody3);
+                $asm89CacheBody1 = ob_get_clean();
+                $asm89CacheStrategy1->saveBlock($asm89Key1, $asm89CacheBody1);
             }
-            echo $asm89CacheBody3;
+            echo $asm89CacheBody1;
         }
     }
 
