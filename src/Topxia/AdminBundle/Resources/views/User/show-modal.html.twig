@@ -61,19 +61,19 @@
     </td>
   </tr>
 
-  <tr>
-    <th>{{'最近登录时间/IP'|trans}}</th>
-    <td> 
-      {% if user.loginTime == 0 %}
-          --
-      {% else %}
-          {{ user.loginTime|date('Y-n-d H:i:s') }}
-      {% endif %}
-      {% if user.loginIp|default is not empty %}
-           / {{ user.loginIp }} {{convertIP(user.loginIp)}}
-      {% endif %}
-     </td>
-  </tr>
+  {#<tr>#}
+    {#<th>{{'最近登录时间/IP'|trans}}</th>#}
+    {#<td> #}
+      {#{% if user.loginTime == 0 %}#}
+          {#--#}
+      {#{% else %}#}
+          {#{{ user.loginTime|date('Y-n-d H:i:s') }}#}
+      {#{% endif %}#}
+      {#{% if user.loginIp|default is not empty %}#}
+           {#/ {{ user.loginIp }} {{convertIP(user.loginIp)}}#}
+      {#{% endif %}#}
+     {#</td>#}
+  {#</tr>#}
 
   <tr>
     <th>{{'姓名'|trans}}</th>
@@ -110,16 +110,16 @@
     </td>
   </tr> #}
  
-   <tr>
-    <th>{{'身份证号'|trans}}</th>
-    <td>
-      {% if profile.idcard %}
-        {{ profile.idcard }}
-      {% else %}
-        {{'暂无'|trans}}
-      {% endif %}
-    </td>
-  </tr>
+   {#<tr>#}
+    {#<th>{{'身份证号'|trans}}</th>#}
+    {#<td>#}
+      {#{% if profile.idcard %}#}
+        {#{{ profile.idcard }}#}
+      {#{% else %}#}
+        {#{{'暂无'|trans}}#}
+      {#{% endif %}#}
+    {#</td>#}
+  {#</tr>#}
 
   <tr>
     <th>{{'手机号码'|trans}}</th>
@@ -156,27 +156,27 @@
     </td>
   </tr> #}
 
-  <tr>
-    <th>{{'公司'|trans}}</th>
-    <td>
-      {% if profile.company %}
-        {{ profile.company }}
-      {% else %}
-        {{'暂无'|trans}}
-      {% endif %}
-    </td>
-  </tr>
+  {#<tr>#}
+    {#<th>{{'公司'|trans}}</th>#}
+    {#<td>#}
+      {#{% if profile.company %}#}
+        {#{{ profile.company }}#}
+      {#{% else %}#}
+        {#{{'暂无'|trans}}#}
+      {#{% endif %}#}
+    {#</td>#}
+  {#</tr>#}
 
-  <tr>
-    <th>{{'职业'|trans}}</th>
-    <td>
-      {% if profile.job %}
-        {{ profile.job }}
-      {% else %}
-        {{'暂无'|trans}}
-      {% endif %}
-    </td>
-  </tr>
+  {#<tr>#}
+    {#<th>{{'职业'|trans}}</th>#}
+    {#<td>#}
+      {#{% if profile.job %}#}
+        {#{{ profile.job }}#}
+      {#{% else %}#}
+        {#{{'暂无'|trans}}#}
+      {#{% endif %}#}
+    {#</td>#}
+  {#</tr>#}
 
 
   <tr>
@@ -190,16 +190,16 @@
     </td>
   </tr>
 
-  <tr>
-    <th>{{'个人签名'|trans}}</th>
-    <td>
-    {% if profile.signature %}
-        {{ profile.signature }}
-      {% else %}
-        {{'暂无'|trans}}
-      {% endif %}
-    </td>
-  </tr>
+  {#<tr>#}
+    {#<th>{{'个人签名'|trans}}</th>#}
+    {#<td>#}
+    {#{% if profile.signature %}#}
+        {#{{ profile.signature }}#}
+      {#{% else %}#}
+        {#{{'暂无'|trans}}#}
+      {#{% endif %}#}
+    {#</td>#}
+  {#</tr>#}
 
   <tr>
     <th>{{'自我介绍'|trans}}</th>
@@ -214,49 +214,49 @@
     </td>
   </tr>
 
-  <tr>
-    <th>{{'个人网站'|trans}}</th>
-    <td>
-      {% if profile.site %}
-        {{ profile.site }}
-      {% else %}
-        {{'暂无'|trans}}
-      {% endif %}
-    </td>
-  </tr>
+  {#<tr>#}
+    {#<th>{{'个人网站'|trans}}</th>#}
+    {#<td>#}
+      {#{% if profile.site %}#}
+        {#{{ profile.site }}#}
+      {#{% else %}#}
+        {#{{'暂无'|trans}}#}
+      {#{% endif %}#}
+    {#</td>#}
+  {#</tr>#}
 
-  <tr>
-    <th>{{'微博'|trans}}</th>
-    <td>
-      {% if profile.weibo %}
-        {{ profile.weibo }}
-      {% else %}
-        {{'暂无'|trans}}
-      {% endif %}
-    </td>
-  </tr>
+  {#<tr>#}
+    {#<th>{{'微博'|trans}}</th>#}
+    {#<td>#}
+      {#{% if profile.weibo %}#}
+        {#{{ profile.weibo }}#}
+      {#{% else %}#}
+        {#{{'暂无'|trans}}#}
+      {#{% endif %}#}
+    {#</td>#}
+  {#</tr>#}
 
-  <tr>
-    <th>{{'微信'|trans}}</th>
-    <td>
-      {% if profile.weixin %}
-        {{ profile.weixin }}
-      {% else %}
-        {{'暂无'|trans}}
-      {% endif %}
-    </td>
-  </tr>
+  {#<tr>#}
+    {#<th>{{'微信'|trans}}</th>#}
+    {#<td>#}
+      {#{% if profile.weixin %}#}
+        {#{{ profile.weixin }}#}
+      {#{% else %}#}
+        {#{{'暂无'|trans}}#}
+      {#{% endif %}#}
+    {#</td>#}
+  {#</tr>#}
 
-  <tr>
-    <th>QQ</th>
-    <td>
-      {% if profile.qq %}
-        {{ profile.qq }}
-      {% else %}
-        {{'暂无'|trans}}
-      {% endif %}
-    </td>
-  </tr>
+  {#<tr>#}
+    {#<th>QQ</th>#}
+    {#<td>#}
+      {#{% if profile.qq %}#}
+        {#{{ profile.qq }}#}
+      {#{% else %}#}
+        {#{{'暂无'|trans}}#}
+      {#{% endif %}#}
+    {#</td>#}
+  {#</tr>#}
 
 </table>
 <hr>
