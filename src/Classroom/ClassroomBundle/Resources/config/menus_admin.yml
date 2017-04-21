@@ -28,15 +28,15 @@ admin_classroom:
                         id: (classroom.id)
                         ref: classroomList
                     visable: ( classroom.recommended )
-                admin_classroom_set_recommend:
-                    name: 推荐班级
-                    mode: modal
-                    icon: 'glyphicon glyphicon-hand-up'
-                    group: groupButton
-                    router_params:
-                        id: (classroom.id)
-                        ref: classroomList
-                    visable: ( not classroom.recommended )
+#                admin_classroom_set_recommend:
+#                    name: 推荐班级
+#                    mode: modal
+#                    icon: 'glyphicon glyphicon-hand-up'
+#                    group: groupButton
+#                    router_params:
+#                        id: (classroom.id)
+#                        ref: classroomList
+#                    visable: ( not classroom.recommended )
                 admin_classroom_close:
                     name: 关闭班级
                     mode: none
