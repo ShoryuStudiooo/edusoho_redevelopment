@@ -1,8 +1,0 @@
-/node_modules
-/vendor
-/.idea
-/app/cache
-/app/cache/prod
-/app/cache/prod/*
-
-
