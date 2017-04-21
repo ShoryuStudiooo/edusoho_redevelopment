@@ -5,9 +5,9 @@
 {% if not classroom.smallPicture %}
 {% set unsetted = unsetted ~ ',图片'|trans %}
 {% endif %}
-{% if classroom.price == 0 %}
-  {% set unsetted = unsetted ~ ',价格'|trans %}
-{% endif %}
+{#{% if classroom.price == 0 %}#}
+  {#{% set unsetted = unsetted ~ ',价格'|trans %}#}
+{#{% endif %}#}
 {% if classroom.courseNum == 0 %}
 {% set unsetted = unsetted ~ ',课程'|trans %}
 {% endif %}
