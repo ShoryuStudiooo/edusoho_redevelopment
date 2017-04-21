@@ -99,16 +99,16 @@ admin:
                             router_name: admin_teacher
                             disable: true
                             children:
-                                admin_teacher_promote:
-                                    name: 推荐老师
-                                    class: promote-teacher
-                                    mode: modal
-                                    icon: 'glyphicon glyphicon-hand-up'
-                                    group: groupButton
-                                    visable: (user.promoted == 0)
-                                    router_params:
-                                        id: (user.id)
-                                        type: teacherList
+#                                admin_teacher_promote:
+#                                    name: 推荐老师
+#                                    class: promote-teacher
+#                                    mode: modal
+#                                    icon: 'glyphicon glyphicon-hand-up'
+#                                    group: groupButton
+#                                    visable: (user.promoted == 0)
+#                                    router_params:
+#                                        id: (user.id)
+#                                        type: teacherList
                                 admin_teacher_promote_cancel:
                                     name: 取消推荐
                                     class: cancel-promote-teacher
@@ -117,9 +117,9 @@ admin:
                                     visable: (user.promoted == 1)
                                     router_params:
                                         id: (user.id)
-                        admin_teacher_promote_list:
-                            name: 教师推荐
-                            disable: true
+#                        admin_teacher_promote_list:
+#                            name: 教师推荐
+#                            disable: true
 #                admin_approval_manage:
 #                    name: 实名认证管理
 #                    children:
