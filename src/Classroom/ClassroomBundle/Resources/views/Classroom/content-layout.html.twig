@@ -32,15 +32,15 @@
         {{ render(controller('ClassroomPlanBundle:ClassroomPlan:todayUserTaskBlock',{classroomId:classroom.id})) }}
       {% endif %}
 
-      {% if classroom_permit(classroom.id, 'Take', true) %}
-        {{ render(controller('ClassroomBundle:Classroom:signPage',{classroomId:classroom.id})) }}
-      {% endif %}
+      {#{% if classroom_permit(classroom.id, 'Take', true) %}#}
+        {#{{ render(controller('ClassroomBundle:Classroom:signPage',{classroomId:classroom.id})) }}#}
+      {#{% endif %}#}
       
       {{ render(controller('ClassroomBundle:Classroom:teachersBlock',{classroom:classroom})) }}
 
       {{ render(controller('ClassroomBundle:Classroom:latestMembersBlock',{classroom:classroom})) }}
 
-      {{ render(controller('ClassroomBundle:Classroom:classroomStatusBlock',{classroom:classroom})) }}
+      {#{{ render(controller('ClassroomBundle:Classroom:classroomStatusBlock',{classroom:classroom})) }}#}
       
     {% endblock %}
   </aside>
