@@ -351,56 +351,56 @@ admin:
         admin_operation:
             name: 运营
             children:
-                admin_operation_article:
-                    name: 资讯管理
-                    children:
-                        admin_operation_article_manage:
-                            name: 资讯管理
-                            disable: true
-                            router_name: admin_article
-                            children:
-                                admin_operation_article_create:
-                                    name: '添加资讯'
-                                    router_name: admin_article_create
-                                    group: topBtn
-                        admin_operation_article_category:
-                            name: '栏目管理'
-                            disable: true
-                            router_name: admin_article_category
-                            children:
-                                admin_operation_category_create:
-                                    name: '添加栏目'
-                                    router_name: admin_article_category_create
-                                    mode: modal
-                                    group: topBtn
-                admin_operation_group:
-                    name: 小组话题管理
-                    children:
-                        admin_operation_group_manage:
-                            name: 小组管理
-                            disable: true
-                            router_name: admin_group
-                            children:
-                                admin_operation_group_create:
-                                    name: 创建小组
-                                    router_name: group_add
-                                    group: topBtn
-                                    blank: 1
-                        admin_operation_group_thread:
-                            name: 小组话题管理
-                            disable: true
-                            router_name: admin_groupThread
-                admin_operation_invite:
-                    name: 邀请管理
-                    children:
-                        admin_operation_invite_manage:
-                            name: 邀请管理
-                            disable: true
-                            router_name: admin_invite
-                        admin_operation_invite_coupon:
-                            name: 奖励查询
-                            disable: true
-                            router_name: admin_invite_coupon
+#                admin_operation_article:
+#                    name: 资讯管理
+#                    children:
+#                        admin_operation_article_manage:
+#                            name: 资讯管理
+#                            disable: true
+#                            router_name: admin_article
+#                            children:
+#                                admin_operation_article_create:
+#                                    name: '添加资讯'
+#                                    router_name: admin_article_create
+#                                    group: topBtn
+#                        admin_operation_article_category:
+#                            name: '栏目管理'
+#                            disable: true
+#                            router_name: admin_article_category
+#                            children:
+#                                admin_operation_category_create:
+#                                    name: '添加栏目'
+#                                    router_name: admin_article_category_create
+#                                    mode: modal
+#                                    group: topBtn
+#                admin_operation_group:
+#                    name: 小组话题管理
+#                    children:
+#                        admin_operation_group_manage:
+#                            name: 小组管理
+#                            disable: true
+#                            router_name: admin_group
+#                            children:
+#                                admin_operation_group_create:
+#                                    name: 创建小组
+#                                    router_name: group_add
+#                                    group: topBtn
+#                                    blank: 1
+#                        admin_operation_group_thread:
+#                            name: 小组话题管理
+#                            disable: true
+#                            router_name: admin_groupThread
+#                admin_operation_invite:
+#                    name: 邀请管理
+#                    children:
+#                        admin_operation_invite_manage:
+#                            name: 邀请管理
+#                            disable: true
+#                            router_name: admin_invite
+#                        admin_operation_invite_coupon:
+#                            name: 奖励查询
+#                            disable: true
+#                            router_name: admin_invite_coupon
                 admin_announcement:
                     name: '网站公告管理'
                     group: 2
@@ -448,215 +448,215 @@ admin:
                             disable: true
                             router_params:
                                 type: page
-                admin_operation_mobile:
-                    name: '移动端内容管理'
-                    group: 2
-                    children:
-                        admin_operation_mobile_banner_manage:
-                            name: 轮播图设置
-                            disable: true
-                            router_name: admin_operation_mobile
-                        admin_operation_mobile_select_manage:
-                            name: 每周精选设置
-                            disable: true
-                            router_name: admin_operation_mobile_select
-                        admin_discovery_column_index:
-                            name: '发现页栏目管理'
-                            disable: true
-                            children:
-                                admin_discovery_column_create:
-                                    name: '添加栏目'
-                                    group: topBtn
-                                    mode: modal
-                admin_operation_analysis_register:
-                    name: 数据统计
-                    group: 3
-                    children:
-                        admin_operation_analysis:
-                            disable: true
-                            name: 数据统计
-                            router_params:
-                                tab: trend
-                                analysisDateType: register
-                            router_name: admin_operation_analysis_register
-        admin_order:
-            name: 订单
-            children:
-                admin_course_order_manage:
-                    name: 课程订单
-                    children:
-                        admin_course_order:
-                            name: 课程订单
-                            router_name: admin_course_order_manage
-                            disable: true
-                admin_coin_order_manange:
-                    name: 虚拟币订单
-                    children:
-                        admin_coin_orders:
-                            name: 虚拟币订单
-                            disable: true
-        admin_finance:
-            name: 账务
-            children:
-                # admin_accounts_center:
-                #     name: 账务中心
-                #     children:
-                #         admin_account_center:
-                #             name: 账务中心
-                #             disable: true
-                admin_bills:
-                    name: 账单管理
-                    children:
-                        admin_bill:
-                            name: 现金账单
-                            disable: true
-                        admin_coin_records:
-                            name: 虚拟币账单
-                            disable: true
-                admin_coin_user:
-                    name: 虚拟币管理
-                    children:
-                        admin_coin_user_records:
-                            name: 虚拟币管理
-                            disable: true
-                            router_name: admin_coin_user_records
-                admin_course_refunds:
-                    name: 课程退款管理
-                    children:
-                        admin_course_refunds_manage:
-                            name: 课程退款管理
-                            disable: true
-                            router_name: admin_order_refunds
-                            router_params:
-                                targetType: course
-                                status: created
-        admin_app:
-            name: 教育云
-            visable: (not (setting('copyright.thirdCopyright', false) == 1) and not is_without_network()) #第三方授权和无网情况下不显示教育云
-            children:
-                admin_my_cloud:
-                    name: 概览
-                    children:
-                        admin_my_cloud_overview:
-                            name: 教育云概览
-                            disable: true
-                admin_cloud_video_setting:
-                    name: 云视频
-                    router_name: admin_cloud_video_overview
-                    visable: (cloudStatus())
-                    children:
-                        admin_cloud_video_overview:
-                            name: 概览
-                            disable: true
-                        admin_cloud_setting_video:
-                            name: 设置
-                            disable: true
-                admin_cloud_edulive_setting:
-                    name: 云直播
-                    visable: (cloudStatus())
-                    router_name: admin_cloud_edulive_overview
-                    children:
-                        admin_cloud_edulive_overview:
-                            name: 概览
-                            disable: true
-                        admin_setting_cloud_edulive:
-                            name: 设置
-                            disable: true
-                admin_edu_cloud_sms:
-                    name: 云短信
-                    visable: (cloudStatus())
-                    children:
-                        admin_edu_cloud_sms_overview:
-                            name: 概览
-                            router_name: admin_edu_cloud_sms
-                            disable: true
-                        admin_edu_cloud_setting_sms:
-                            name: 设置
-                            disable: true
-                admin_edu_cloud_email:
-                    name: 云邮件
-                    visable: (cloudStatus())
-                    children:
-                        admin_edu_cloud_email_overview:
-                            name: 概览
-                            router_name: admin_edu_cloud_email
-                            disable: true
-                        admin_edu_cloud_email_setting:
-                            name: 设置
-                            disable: true
-                admin_edu_cloud_search_setting:
-                    name: 云搜索
-                    visable: (cloudStatus())
-                    router_name: admin_edu_cloud_search
-                    children:
-                        admin_edu_cloud_search_overview:
-                            name: 概览
-                            router_name: admin_edu_cloud_search
-                            disable: true
-                        admin_edu_cloud_setting_search:
-                            name: 设置
-                            disable: true
-                admin_app_im:
-                    name: 即时聊天设置
-                    visable: (cloudStatus())
-                    children:
-                        admin_app_im_setting:
-                            name: 即时聊天设置
-                            router_name: admin_app_im
-                            disable: true
-                admin_setting_cloud_attachment:
-                    name: 云附件设置
-                    visable: (cloudStatus())
-                    children:
-                        admin_edu_cloud_attachment:
-                            name: 云附件设置
-                            disable: true
-                admin_app_center_show:
-                    name: ES应用
-                    router_name: admin_app_center
-                    router_params:
-                        postStatus: all
-                    children:
-                        admin_app_center:
-                            name: 应用中心
-                            router_name: admin_app_center
-                            disable: true
-                            router_params:
-                                postStatus: all
-                        admin_app_installed:
-                            name: 已购项目
-                            disable: true
-                            router_params:
-                                postStatus: all
-                        admin_app_upgrades:
-                            name: 更新
-                            class: app-upgrade
-                            disable: true
-                        admin_app_logs:
-                            name: 更新日志
-                            disable: true
-                admin_cloud_attachment_manage:
-                    name: 云附件
-                    visable: (cloudStatus())
-                    children:
-                        admin_cloud_attachment:
-                            name: 云附件
-                            disable: true
-                # admin_cloud_consult:
-                #     name: 云问答
-                #     router_name: admin_cloud_consult_setting
-                #     visable: (cloudStatus())
-                #     children:
-                #         admin_cloud_consult_setting:
-                #             name: 设置
-                #             disable: true
-                admin_setting_cloud:
-                    name: 授权信息
-                    children:
-                        admin_setting_my_cloud:
-                            name: 授权信息
-                            router_name: admin_setting_cloud
-                            disable: true
+#                admin_operation_mobile:
+#                    name: '移动端内容管理'
+#                    group: 2
+#                    children:
+#                        admin_operation_mobile_banner_manage:
+#                            name: 轮播图设置
+#                            disable: true
+#                            router_name: admin_operation_mobile
+#                        admin_operation_mobile_select_manage:
+#                            name: 每周精选设置
+#                            disable: true
+#                            router_name: admin_operation_mobile_select
+#                        admin_discovery_column_index:
+#                            name: '发现页栏目管理'
+#                            disable: true
+#                            children:
+#                                admin_discovery_column_create:
+#                                    name: '添加栏目'
+#                                    group: topBtn
+#                                    mode: modal
+#                admin_operation_analysis_register:
+#                    name: 数据统计
+#                    group: 3
+#                    children:
+#                        admin_operation_analysis:
+#                            disable: true
+#                            name: 数据统计
+#                            router_params:
+#                                tab: trend
+#                                analysisDateType: register
+#                            router_name: admin_operation_analysis_register
+#        admin_order:
+#            name: 订单
+#            children:
+#                admin_course_order_manage:
+#                    name: 课程订单
+#                    children:
+#                        admin_course_order:
+#                            name: 课程订单
+#                            router_name: admin_course_order_manage
+#                            disable: true
+#                admin_coin_order_manange:
+#                    name: 虚拟币订单
+#                    children:
+#                        admin_coin_orders:
+#                            name: 虚拟币订单
+#                            disable: true
+#        admin_finance:
+#            name: 账务
+#            children:
+#                # admin_accounts_center:
+#                #     name: 账务中心
+#                #     children:
+#                #         admin_account_center:
+#                #             name: 账务中心
+#                #             disable: true
+#                admin_bills:
+#                    name: 账单管理
+#                    children:
+#                        admin_bill:
+#                            name: 现金账单
+#                            disable: true
+#                        admin_coin_records:
+#                            name: 虚拟币账单
+#                            disable: true
+#                admin_coin_user:
+#                    name: 虚拟币管理
+#                    children:
+#                        admin_coin_user_records:
+#                            name: 虚拟币管理
+#                            disable: true
+#                            router_name: admin_coin_user_records
+#                admin_course_refunds:
+#                    name: 课程退款管理
+#                    children:
+#                        admin_course_refunds_manage:
+#                            name: 课程退款管理
+#                            disable: true
+#                            router_name: admin_order_refunds
+#                            router_params:
+#                                targetType: course
+#                                status: created
+#        admin_app:
+#            name: 教育云
+#            visable: (not (setting('copyright.thirdCopyright', false) == 1) and not is_without_network()) #第三方授权和无网情况下不显示教育云
+#            children:
+#                admin_my_cloud:
+#                    name: 概览
+#                    children:
+#                        admin_my_cloud_overview:
+#                            name: 教育云概览
+#                            disable: true
+#                admin_cloud_video_setting:
+#                    name: 云视频
+#                    router_name: admin_cloud_video_overview
+#                    visable: (cloudStatus())
+#                    children:
+#                        admin_cloud_video_overview:
+#                            name: 概览
+#                            disable: true
+#                        admin_cloud_setting_video:
+#                            name: 设置
+#                            disable: true
+#                admin_cloud_edulive_setting:
+#                    name: 云直播
+#                    visable: (cloudStatus())
+#                    router_name: admin_cloud_edulive_overview
+#                    children:
+#                        admin_cloud_edulive_overview:
+#                            name: 概览
+#                            disable: true
+#                        admin_setting_cloud_edulive:
+#                            name: 设置
+#                            disable: true
+#                admin_edu_cloud_sms:
+#                    name: 云短信
+#                    visable: (cloudStatus())
+#                    children:
+#                        admin_edu_cloud_sms_overview:
+#                            name: 概览
+#                            router_name: admin_edu_cloud_sms
+#                            disable: true
+#                        admin_edu_cloud_setting_sms:
+#                            name: 设置
+#                            disable: true
+#                admin_edu_cloud_email:
+#                    name: 云邮件
+#                    visable: (cloudStatus())
+#                    children:
+#                        admin_edu_cloud_email_overview:
+#                            name: 概览
+#                            router_name: admin_edu_cloud_email
+#                            disable: true
+#                        admin_edu_cloud_email_setting:
+#                            name: 设置
+#                            disable: true
+#                admin_edu_cloud_search_setting:
+#                    name: 云搜索
+#                    visable: (cloudStatus())
+#                    router_name: admin_edu_cloud_search
+#                    children:
+#                        admin_edu_cloud_search_overview:
+#                            name: 概览
+#                            router_name: admin_edu_cloud_search
+#                            disable: true
+#                        admin_edu_cloud_setting_search:
+#                            name: 设置
+#                            disable: true
+#                admin_app_im:
+#                    name: 即时聊天设置
+#                    visable: (cloudStatus())
+#                    children:
+#                        admin_app_im_setting:
+#                            name: 即时聊天设置
+#                            router_name: admin_app_im
+#                            disable: true
+#                admin_setting_cloud_attachment:
+#                    name: 云附件设置
+#                    visable: (cloudStatus())
+#                    children:
+#                        admin_edu_cloud_attachment:
+#                            name: 云附件设置
+#                            disable: true
+#                admin_app_center_show:
+#                    name: ES应用
+#                    router_name: admin_app_center
+#                    router_params:
+#                        postStatus: all
+#                    children:
+#                        admin_app_center:
+#                            name: 应用中心
+#                            router_name: admin_app_center
+#                            disable: true
+#                            router_params:
+#                                postStatus: all
+#                        admin_app_installed:
+#                            name: 已购项目
+#                            disable: true
+#                            router_params:
+#                                postStatus: all
+#                        admin_app_upgrades:
+#                            name: 更新
+#                            class: app-upgrade
+#                            disable: true
+#                        admin_app_logs:
+#                            name: 更新日志
+#                            disable: true
+#                admin_cloud_attachment_manage:
+#                    name: 云附件
+#                    visable: (cloudStatus())
+#                    children:
+#                        admin_cloud_attachment:
+#                            name: 云附件
+#                            disable: true
+#                # admin_cloud_consult:
+#                #     name: 云问答
+#                #     router_name: admin_cloud_consult_setting
+#                #     visable: (cloudStatus())
+#                #     children:
+#                #         admin_cloud_consult_setting:
+#                #             name: 设置
+#                #             disable: true
+#                admin_setting_cloud:
+#                    name: 授权信息
+#                    children:
+#                        admin_setting_my_cloud:
+#                            name: 授权信息
+#                            router_name: admin_setting_cloud
+#                            disable: true
         admin_system:
             name: 系统
             router_name: admin_setting_site
