@@ -28,7 +28,7 @@
         <th >{{'所属%name%'|trans({'%name%':setting("classroom.name")|default('班级'|trans)})}}</th>
         {% else %}
         <th>{% if setting('default.user_name') %}{{setting('default.user_name')|default('学员'|trans)}}{% else %}{{'学员'|trans}}{% endif %}{{'数'|trans}}</th>
-        <th>{{'价格(元)'|trans}}</th>
+        {#<th>{{'价格(元)'|trans}}</th>#}
         {% endif %}
         <th>{{'状态'|trans}}</th>
         <th width="20%">{{'操作'|trans}}</th>
@@ -68,7 +68,7 @@
             </td>
             {% else %}
             <td>{{ course.studentNum }}</td>
-            <td>{{ course.price }}</td>
+            {#<td>{{ course.price }}</td>#}
             {% endif %}
 
             <td> {{ dict_macro.courseStatus( course.status) }}</td>
