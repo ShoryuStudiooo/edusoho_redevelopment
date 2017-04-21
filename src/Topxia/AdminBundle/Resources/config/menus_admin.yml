@@ -120,22 +120,22 @@ admin:
                         admin_teacher_promote_list:
                             name: 教师推荐
                             disable: true
-                admin_approval_manage:
-                    name: 实名认证管理
-                    children:
-                        admin_approval_approvals:
-                            name: 实名认证管理
-                            router_params:
-                                approvalStatus: approving
-                            disable: true
-                            children:
-                                admin_approval_cancel:
-                                    name: 撤销
-                                    router_params:
-                                        id: (user.id)
-                                    class: 'btn cancel-approval'
-                                    mode: none
-                                    group: groupButton
+#                admin_approval_manage:
+#                    name: 实名认证管理
+#                    children:
+#                        admin_approval_approvals:
+#                            name: 实名认证管理
+#                            router_params:
+#                                approvalStatus: approving
+#                            disable: true
+#                            children:
+#                                admin_approval_cancel:
+#                                    name: 撤销
+#                                    router_params:
+#                                        id: (user.id)
+#                                    class: 'btn cancel-approval'
+#                                    mode: none
+#                                    group: groupButton
                 admin_message_manage:
                     name: 私信管理
                     children:
