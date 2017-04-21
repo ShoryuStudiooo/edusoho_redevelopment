@@ -47,25 +47,25 @@
                 </td>
               {% endif %}
             </tr>
-            <tr>
-              <td>{{'价格'|trans}}</td>
-              <td>
-                <a class="btn btn-info btn-xs pull-right" href="{{path('classroom_manage_set_price',{id:classroom.id})}}">
-                  {% if setting('coin.coin_enabled') and setting('coin.price_type') == 'Coin' %}
-                    {{classroom.price * setting('coin.cash_rate') }} {{setting('coin.coin_name')}}
-                    {% if classroom.price * setting('coin.cash_rate')  == 0 %}
-                      {% set unsetted = unsetted ~ ',价格'|trans %}
-                    {% endif %}
-                  {% else %}
-                    {{ classroom.price }}{{'元'|trans}}
-                    {% if classroom.price == 0 %}
-                      {% set unsetted = unsetted ~ ',价格'|trans %}
-                    {% endif %}
-                  {% endif %}
-                  <i class="glyphicon glyphicon-circle-arrow-right"></i>
-                </a>
-              </td>
-            </tr>
+            {#<tr>#}
+              {#<td>{{'价格'|trans}}</td>#}
+              {#<td>#}
+                {#<a class="btn btn-info btn-xs pull-right" href="{{path('classroom_manage_set_price',{id:classroom.id})}}">#}
+                  {#{% if setting('coin.coin_enabled') and setting('coin.price_type') == 'Coin' %}#}
+                    {#{{classroom.price * setting('coin.cash_rate') }} {{setting('coin.coin_name')}}#}
+                    {#{% if classroom.price * setting('coin.cash_rate')  == 0 %}#}
+                      {#{% set unsetted = unsetted ~ ',价格'|trans %}#}
+                    {#{% endif %}#}
+                  {#{% else %}#}
+                    {#{{ classroom.price }}{{'元'|trans}}#}
+                    {#{% if classroom.price == 0 %}#}
+                      {#{% set unsetted = unsetted ~ ',价格'|trans %}#}
+                    {#{% endif %}#}
+                  {#{% endif %}#}
+                  {#<i class="glyphicon glyphicon-circle-arrow-right"></i>#}
+                {#</a>#}
+              {#</td>#}
+            {#</tr>#}
           </table>
         </div>
       </div>
@@ -103,14 +103,14 @@
                 </a>
               </td>
             </tr>
-            <tr>
-              <td>{{'旁听生数'|trans}}</td>
-              <td>
-                <a class="btn {% if (classroom.auditorNum) > 0 %}btn-info{% else %}btn-danger{% endif %} btn-xs pull-right" href="{{ path('classroom_manage_aduitor', {id:classroom.id}) }}">
-                  {{classroom.auditorNum}} <i class="glyphicon glyphicon-circle-arrow-right"></i>
-                </a>
-              </td>
-            </tr>
+            {#<tr>#}
+              {#<td>{{'旁听生数'|trans}}</td>#}
+              {#<td>#}
+                {#<a class="btn {% if (classroom.auditorNum) > 0 %}btn-info{% else %}btn-danger{% endif %} btn-xs pull-right" href="{{ path('classroom_manage_aduitor', {id:classroom.id}) }}">#}
+                  {#{{classroom.auditorNum}} <i class="glyphicon glyphicon-circle-arrow-right"></i>#}
+                {#</a>#}
+              {#</td>#}
+            {#</tr>#}
           </table>
         </div>
       </div>
