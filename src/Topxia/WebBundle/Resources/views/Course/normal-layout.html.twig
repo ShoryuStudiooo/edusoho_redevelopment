@@ -62,13 +62,13 @@
           {{ render(controller('TopxiaWebBundle:Part/Course:teachers',{course: course})) }}
         {% endcache %}
 
-        {% cache 'course/' ~ course.id ~ '/sidebar/students' 600 %}
-          {{ render(controller('TopxiaWebBundle:Part/Course:students',{course: course})) }}
-        {% endcache %}
-        
-        {% cache 'course/' ~ course.id ~ '/sidebar/statuses' 600 %}
-          {% include 'TopxiaWebBundle:Course:Part/normal-sidebar-statuses.html.twig' %}
-        {% endcache %}
+        {#{% cache 'course/' ~ course.id ~ '/sidebar/students' 600 %}#}
+          {#{{ render(controller('TopxiaWebBundle:Part/Course:students',{course: course})) }}#}
+        {#{% endcache %}#}
+        {##}
+        {#{% cache 'course/' ~ course.id ~ '/sidebar/statuses' 600 %}#}
+          {#{% include 'TopxiaWebBundle:Course:Part/normal-sidebar-statuses.html.twig' %}#}
+        {#{% endcache %}#}
 
       {% endblock %}
     </div>
