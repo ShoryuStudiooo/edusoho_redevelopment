@@ -50,19 +50,19 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<label class="col-md-2 control-label" for="profile_idcard">{{'身份证号码'|trans}}</label>
-						{% if profile.idcard and (app.user.approvalStatus == 'approved' or app.user.approvalStatus == 'approving') %}
-              <div class="col-md-7 controls">
-                <div class="control-text">{{ blur_idcard_number(profile.idcard) }}</div>
-              </div>
-            {% else %}
-              <div class="col-md-7 controls radios">
-                <input type="text" id="profile_idcard" name="profile[idcard]" class="form-control" value="{{ profile.idcard|default('') }}">
-                <div class="help-block" style="display:none;"></div>
-              </div>
-            {% endif %}
-					</div>
+					{#<div class="form-group">#}
+						{#<label class="col-md-2 control-label" for="profile_idcard">{{'身份证号码'|trans}}</label>#}
+						{#{% if profile.idcard and (app.user.approvalStatus == 'approved' or app.user.approvalStatus == 'approving') %}#}
+              {#<div class="col-md-7 controls">#}
+                {#<div class="control-text">{{ blur_idcard_number(profile.idcard) }}</div>#}
+              {#</div>#}
+            {#{% else %}#}
+              {#<div class="col-md-7 controls radios">#}
+                {#<input type="text" id="profile_idcard" name="profile[idcard]" class="form-control" value="{{ profile.idcard|default('') }}">#}
+                {#<div class="help-block" style="display:none;"></div>#}
+              {#</div>#}
+            {#{% endif %}#}
+					{#</div>#}
 
 					{% if (user.verifiedMobile|length) > 0 %}
 						<div class="form-group">
@@ -94,21 +94,21 @@
 						{% endif %}
 					{% endif %}
 
-					<div class="form-group form-forIam-group form-notStudent-group">
-						<label class="col-md-2 control-label">{{'公司'|trans}}</label>
-						<div class="col-md-7 controls">
-							<input type="text" id="profile_company" name="profile[company]" class="form-control" value="{{ profile.company|default('') }}">
-							<div class="help-block" style="display:none;"></div>
-						</div>
-					</div>
+					{#<div class="form-group form-forIam-group form-notStudent-group">#}
+						{#<label class="col-md-2 control-label">{{'公司'|trans}}</label>#}
+						{#<div class="col-md-7 controls">#}
+							{#<input type="text" id="profile_company" name="profile[company]" class="form-control" value="{{ profile.company|default('') }}">#}
+							{#<div class="help-block" style="display:none;"></div>#}
+						{#</div>#}
+					{#</div>#}
 
-					<div class="form-group form-forIam-group form-notStudent-group">
-						<label class="col-md-2 control-label">{{'职业'|trans}}</label>
-						<div class="col-md-7 controls">
-							<input type="text" id="profile_job" name="profile[job]" class="form-control" value="{{ profile.job|default('') }}">
-							<div class="help-block" style="display:none;"></div>
-						</div>
-					</div>
+					{#<div class="form-group form-forIam-group form-notStudent-group">#}
+						{#<label class="col-md-2 control-label">{{'职业'|trans}}</label>#}
+						{#<div class="col-md-7 controls">#}
+							{#<input type="text" id="profile_job" name="profile[job]" class="form-control" value="{{ profile.job|default('') }}">#}
+							{#<div class="help-block" style="display:none;"></div>#}
+						{#</div>#}
+					{#</div>#}
 
 					<div class="form-group">
 						<label class="col-md-2 control-label">{{'头衔'|trans}}</label>
@@ -118,13 +118,13 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<label class="col-md-2 control-label">{{'个人签名'|trans}}</label>
-						<div class="col-md-7 controls">
-							<textarea type="text" rows="4" maxlength="80" id="profile_signature" name="profile[signature]" class="form-control">{{ profile.signature|default('') }}</textarea>
-							<div class="help-block" style="display:none;"></div>
-						</div>
-					</div>
+					{#<div class="form-group">#}
+						{#<label class="col-md-2 control-label">{{'个人签名'|trans}}</label>#}
+						{#<div class="col-md-7 controls">#}
+							{#<textarea type="text" rows="4" maxlength="80" id="profile_signature" name="profile[signature]" class="form-control">{{ profile.signature|default('') }}</textarea>#}
+							{#<div class="help-block" style="display:none;"></div>#}
+						{#</div>#}
+					{#</div>#}
 
 					<div class="form-group">
 						<label class="col-md-2 control-label">{{'自我介绍'|trans}}</label>
@@ -133,42 +133,42 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<label class="col-md-2 control-label">{{'个人空间'|trans}}</label>
-						<div class="col-md-7 controls">
-							<input type="text" id="profile_site" name="profile[site]" class="form-control" data-widget-cid="widget-4" data-explain="" value="{{ profile.site|default('') }}">
-							<div class="help-block" style="display:none;"></div>
-						</div>
-					</div>
+					{#<div class="form-group">#}
+						{#<label class="col-md-2 control-label">{{'个人空间'|trans}}</label>#}
+						{#<div class="col-md-7 controls">#}
+							{#<input type="text" id="profile_site" name="profile[site]" class="form-control" data-widget-cid="widget-4" data-explain="" value="{{ profile.site|default('') }}">#}
+							{#<div class="help-block" style="display:none;"></div>#}
+						{#</div>#}
+					{#</div>#}
 
-					<div class="form-group">
-						<div class="col-md-2 control-label">
-							<label for="weibo">{{'微博'|trans}}</label>
-						</div>
-						<div class="col-md-7 controls">
-							<input type="text" id="weibo" name="profile[weibo]" class="form-control" data-widget-cid="widget-3" data-explain="" value="{{ profile.weibo|default('') }}">
-							<div class="help-block" style="display:none;"></div>
-						</div>
-						<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isWeiboPublic]" {% if profile.isWeiboPublic %}checked="checked" {% endif %}/>{{'公开'|trans}}</div>
-					</div>
+					{#<div class="form-group">#}
+						{#<div class="col-md-2 control-label">#}
+							{#<label for="weibo">{{'微博'|trans}}</label>#}
+						{#</div>#}
+						{#<div class="col-md-7 controls">#}
+							{#<input type="text" id="weibo" name="profile[weibo]" class="form-control" data-widget-cid="widget-3" data-explain="" value="{{ profile.weibo|default('') }}">#}
+							{#<div class="help-block" style="display:none;"></div>#}
+						{#</div>#}
+						{#<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isWeiboPublic]" {% if profile.isWeiboPublic %}checked="checked" {% endif %}/>{{'公开'|trans}}</div>#}
+					{#</div>#}
 
-					<div class="form-group">
-						<label class="col-md-2 control-label">{{'微信'|trans}}</label>
-						<div class="col-md-7 controls">
-							<input type="text" id="profile_weixin" name="profile[weixin]" class="form-control" value="{{ profile.weixin|default('') }}">
-							<div class="help-block" style="display:none;"></div>
-						</div>
-						<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isWeixinPublic]" {% if profile.isWeixinPublic %}checked="checked" {% endif %}/>{{'公开'|trans}}</div>
-					</div>
+					{#<div class="form-group">#}
+						{#<label class="col-md-2 control-label">{{'微信'|trans}}</label>#}
+						{#<div class="col-md-7 controls">#}
+							{#<input type="text" id="profile_weixin" name="profile[weixin]" class="form-control" value="{{ profile.weixin|default('') }}">#}
+							{#<div class="help-block" style="display:none;"></div>#}
+						{#</div>#}
+						{#<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isWeixinPublic]" {% if profile.isWeixinPublic %}checked="checked" {% endif %}/>{{'公开'|trans}}</div>#}
+					{#</div>#}
 
-					<div class="form-group">
-						<label for="profile_qq" class="col-md-2 control-label">QQ</label>
-						<div class="col-md-7 controls">
-							<input type="text" id="profile_qq" name="profile[qq]" class="form-control" data-widget-cid="widget-2" data-explain="" value="{{ profile.qq|default('') }}">
-							<div class="help-block" style="display:none;"></div>
-						</div>
-						<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isQQPublic]" {% if profile.isQQPublic %}checked="checked"{% endif %}/>{{'公开'|trans}}</div>
-					</div>
+					{#<div class="form-group">#}
+						{#<label for="profile_qq" class="col-md-2 control-label">QQ</label>#}
+						{#<div class="col-md-7 controls">#}
+							{#<input type="text" id="profile_qq" name="profile[qq]" class="form-control" data-widget-cid="widget-2" data-explain="" value="{{ profile.qq|default('') }}">#}
+							{#<div class="help-block" style="display:none;"></div>#}
+						{#</div>#}
+						{#<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isQQPublic]" {% if profile.isQQPublic %}checked="checked"{% endif %}/>{{'公开'|trans}}</div>#}
+					{#</div>#}
 
 
 
