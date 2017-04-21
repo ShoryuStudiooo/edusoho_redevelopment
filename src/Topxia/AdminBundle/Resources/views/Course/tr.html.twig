@@ -19,12 +19,12 @@
     {% endif %}
     <br>
     <span class="text-muted text-sm">{{'分类：'|trans}}{{ category.name|default('--') }}</span>
-    {% if course.recommended %}
-      <span class="label label-default">{{'荐:'|trans}}{{ course.recommendedTime|date('Y-m-d') }} / {{'序号:'|trans}}{{ course.recommendedSeq }}</span>
-    {% endif %}
+    {#{% if course.recommended %}#}
+      {#<span class="label label-default">{{'荐:'|trans}}{{ course.recommendedTime|date('Y-m-d') }} / {{'序号:'|trans}}{{ course.recommendedSeq }}</span>#}
+    {#{% endif %}#}
 
   </td>
-  <td>{{ course.originPrice }}</td>
+  {#<td>{{ course.originPrice }}</td>#}
   {% include 'OrgBundle:Org/Parts:table-body-td.html.twig' with {orgCode: course.orgCode}%}
   {% if filter != 'open' and filter != 'liveOpen' %}
     <td>
