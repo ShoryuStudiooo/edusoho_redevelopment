@@ -117,11 +117,11 @@ articleStatus:
 
 lessonType:
     video: 视频
-    audio: 音频
-    flash: Flash
+#    audio: 音频
+#    flash: Flash
     text: 图文
-    ppt: PPT
-    document: 文档
+#    ppt: PPT
+#    document: 文档
 
 videoStorageType:
     local: 本地视频
