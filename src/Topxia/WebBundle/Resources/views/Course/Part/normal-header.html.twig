@@ -44,99 +44,99 @@
   <div class="course-info">
     <h2 class="title">
       {{ course.title }}
-      <span class="es-qrcode top" data-url="{{path('course_qrcode',{id: course.id})}}">
-        <i class="es-icon es-icon-qrcode"></i>
-        <span class="qrcode-popover">
-          <img src="" alt="">
-          {{'扫二维码继续学习'|trans}}
-          {{'二维码时效为半小时'|trans}}
-        </span>
+      {#<span class="es-qrcode top" data-url="{{path('course_qrcode',{id: course.id})}}">#}
+        {#<i class="es-icon es-icon-qrcode"></i>#}
+        {#<span class="qrcode-popover">#}
+          {#<img src="" alt="">#}
+          {#{{'扫二维码继续学习'|trans}}#}
+          {#{{'二维码时效为半小时'|trans}}#}
+        {#</span>#}
       </span>
     </h2>
     <div class="subtitle">{{ course.subtitle }}</div>
-    <div class="metas">
-      <div class="score">
-        {{ web_macro.star(course.rating) }}
-        <span>({{ course.ratingNum }}{{' 评论'|trans}})</span>
-      </div>
+    {#<div class="metas">#}
+      {#<div class="score">#}
+        {#{{ web_macro.star(course.rating) }}#}
+        {#<span>({{ course.ratingNum }}{{' 评论'|trans}})</span>#}
+      {#</div>#}
 
-      {% if member and member.deadline > 0 %}
-        {% if member.deadline > 'now'|date('U') %}
-          <p class="expiry-date hidden-sm">
-            <span class="mrm">{{'有效期至'|trans}}</span>
-            <span>{{ member.deadline|date('Y-m-d H:i') }}</span>
-          </p>
-        {% else %}
-          {% if course.parentId == 0 %}
-             <div class="alert alert-danger alert-dismissable">
-                {{'您购买的课程已到期，无法学习课时、提问等。如有疑问请联系老师，或点击'|trans}}
-                  <a href="{{path('course_member_deadline_reach',{courseId:course.id})}}">
-                  {% if course.price>0 %}
-                  {{'重新购买'|trans}}
-                  {% else %}
-                  {{'重新加入'|trans}}
-                  {% endif %}
-                  </a>。
-              </div>
-            {% else %}
-              {% set classroom = data('GetClassroomByCourseId', {courseId: course.id}) %}
-                {% if classroom %}
-                  {% if classroom.expiryMode == 'days' %}
-                    <div class="alert alert-warning">你的班级已过有效期，无法继续学习，请<a href="{{ path('classroom_member_deadline_reach', {classroomId:classroom.id}) }}">
-                      {% if classroom.buyable == 1 %}
-                        {{ '重新购买'|trans }}
-                      {% else %}
-                        {{ '重新加入'|trans }}
-                      {% endif %}
-                    </a></div>
-                  {% elseif classroom.expiryMode == 'date' %}
-                    <div class="alert alert-warning">{{ '你的班级已过有效期，无法继续学习'|trans }}</a></div>
-                  {% endif %}
-                {% endif %}
-            {% endif %}
-        {% endif %}
-      {% endif %}
+      {#{% if member and member.deadline > 0 %}#}
+        {#{% if member.deadline > 'now'|date('U') %}#}
+          {#<p class="expiry-date hidden-sm">#}
+            {#<span class="mrm">{{'有效期至'|trans}}</span>#}
+            {#<span>{{ member.deadline|date('Y-m-d H:i') }}</span>#}
+          {#</p>#}
+        {#{% else %}#}
+          {#{% if course.parentId == 0 %}#}
+             {#<div class="alert alert-danger alert-dismissable">#}
+                {#{{'您购买的课程已到期，无法学习课时、提问等。如有疑问请联系老师，或点击'|trans}}#}
+                  {#<a href="{{path('course_member_deadline_reach',{courseId:course.id})}}">#}
+                  {#{% if course.price>0 %}#}
+                  {#{{'重新购买'|trans}}#}
+                  {#{% else %}#}
+                  {#{{'重新加入'|trans}}#}
+                  {#{% endif %}#}
+                  {#</a>。#}
+              {#</div>#}
+            {#{% else %}#}
+              {#{% set classroom = data('GetClassroomByCourseId', {courseId: course.id}) %}#}
+                {#{% if classroom %}#}
+                  {#{% if classroom.expiryMode == 'days' %}#}
+                    {#<div class="alert alert-warning">你的班级已过有效期，无法继续学习，请<a href="{{ path('classroom_member_deadline_reach', {classroomId:classroom.id}) }}">#}
+                      {#{% if classroom.buyable == 1 %}#}
+                        {#{{ '重新购买'|trans }}#}
+                      {#{% else %}#}
+                        {#{{ '重新加入'|trans }}#}
+                      {#{% endif %}#}
+                    {#</a></div>#}
+                  {#{% elseif classroom.expiryMode == 'date' %}#}
+                    {#<div class="alert alert-warning">{{ '你的班级已过有效期，无法继续学习'|trans }}</a></div>#}
+                  {#{% endif %}#}
+                {#{% endif %}#}
+            {#{% endif %}#}
+        {#{% endif %}#}
+      {#{% endif %}#}
 
 
-      {% if not member %}
-        {% if course.buyExpiryTime %}
-          <p class="expiry-date hidden-sm">{{ '购买截止日期: '|trans }}{{ course.buyExpiryTime|date('Y-m-d H:i') }}</p>
-        {% endif %}
+      {#{% if not member %}#}
+        {#{% if course.buyExpiryTime %}#}
+          {#<p class="expiry-date hidden-sm">{{ '购买截止日期: '|trans }}{{ course.buyExpiryTime|date('Y-m-d H:i') }}</p>#}
+        {#{% endif %}#}
 
-        {% if course.expiryDay %}
-          <p class="expiry-date hidden-sm">
-            {% if course.expiryMode|default(null) == 'date' %}
-              {{'学习有效期至: '|trans}}{{course.expiryDay|date('Y-m-d H:i')}}
-            {% else %}
-              {{'学习有效期: '|trans}} {{course.expiryDay}}{{'天'|trans}}
-            {% endif %}
-          </p>
-        {% endif %}
-        <p class="discount-price">
-          <label>{{'价格'|trans}}</label>
-          {% include 'TopxiaWebBundle:Course:Widget/course-price.html.twig' with {shows: ['price', 'discount']} %}
-        </p>
-        {% if course.discountId > 0 %}
-          <p class="old-price hidden-sm">
-            <label>{{'原价'|trans}}</label>
-            {% include 'TopxiaWebBundle:Course:Widget/course-price.html.twig' with {shows: ['originPrice']} %}
-          </p>
-          {% if course.discountObj|default(null) %}
-            <p class="activity">
-              <label>{{'活动'|trans}}</label>
-              <span class="name">{{ course.discountObj.name }}</span>
-              <span>
-                <i class="es-icon es-icon-accesstime"></i>
-                <span id="discount-endtime-countdown" class="text-muted" data-remaintime="{{ course.discountObj.endTime - 'now'|date('U') }}"
-                ></span>
-              </span>
-            </p>
-          {% endif %}
-        {% endif %}
+        {#{% if course.expiryDay %}#}
+          {#<p class="expiry-date hidden-sm">#}
+            {#{% if course.expiryMode|default(null) == 'date' %}#}
+              {#{{'学习有效期至: '|trans}}{{course.expiryDay|date('Y-m-d H:i')}}#}
+            {#{% else %}#}
+              {#{{'学习有效期: '|trans}} {{course.expiryDay}}{{'天'|trans}}#}
+            {#{% endif %}#}
+          {#</p>#}
+        {#{% endif %}#}
+        {#<p class="discount-price">#}
+          {#<label>{{'价格'|trans}}</label>#}
+          {#{% include 'TopxiaWebBundle:Course:Widget/course-price.html.twig' with {shows: ['price', 'discount']} %}#}
+        {#</p>#}
+        {#{% if course.discountId > 0 %}#}
+          {#<p class="old-price hidden-sm">#}
+            {#<label>{{'原价'|trans}}</label>#}
+            {#{% include 'TopxiaWebBundle:Course:Widget/course-price.html.twig' with {shows: ['originPrice']} %}#}
+          {#</p>#}
+          {#{% if course.discountObj|default(null) %}#}
+            {#<p class="activity">#}
+              {#<label>{{'活动'|trans}}</label>#}
+              {#<span class="name">{{ course.discountObj.name }}</span>#}
+              {#<span>#}
+                {#<i class="es-icon es-icon-accesstime"></i>#}
+                {#<span id="discount-endtime-countdown" class="text-muted" data-remaintime="{{ course.discountObj.endTime - 'now'|date('U') }}"#}
+                {#></span>#}
+              {#</span>#}
+            {#</p>#}
+          {#{% endif %}#}
+        {#{% endif %}#}
 
-      {% endif %}
+      {#{% endif %}#}
 
-    </div>
+    {#</div>#}
 
     {% if not member.fake|default(false) and member and member.role == 'student' and member.levelId > 0 and userVipStatus != 'ok' %}
       <div class="alert alert-danger">
