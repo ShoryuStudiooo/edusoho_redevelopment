@@ -74,9 +74,9 @@ admin_classroom:
                     router_params:
                         id: (classroom.id)
                     visable: ( classroom.status=='draft' )    
-        admin_classroom_recommend:
-            name: 班级推荐
-            router_name: admin_classroom_recommend_list
+#        admin_classroom_recommend:
+#            name: 班级推荐
+#            router_name: admin_classroom_recommend_list
 admin_classroom_refunds:
     name: 班级退款管理
     parent: admin_finance
