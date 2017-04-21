@@ -35,18 +35,18 @@
         <div class="col-md-9">
           <input id="lesson-title-field" class="form-control" type="text" name="title" value="{{ field_value(lesson, 'title') }}" >
         </div>
-        <div class="col-md-3">
-          <div class="checkbox">
-            <label style="display: inline-block;"><input type="checkbox" name="free" value="1" {% if field_value(lesson, 'free') %} checked="checked" {% endif %}> {{'免费课时'|trans}}
-              <span data-toggle="popover" class="glyphicon glyphicon-question-sign color-gray text-sm js-free-lesson-data-popover"></span>
-              <div class="popover-content hidden">
-                <div class="popover-item">
-                  <div class="content">{{ '若希望未登录用户能观看免费课时，需管理员在【管理后台】-【系统】-【课程设置】-【课程】中开启【免费课时允许未登录用户观看】。'|trans }}</div>
-                </div>
-              </div>
-            </label>
-          </div>
-        </div>
+        {#<div class="col-md-3">#}
+          {#<div class="checkbox">#}
+            {#<label style="display: inline-block;"><input type="checkbox" name="free" value="1" {% if field_value(lesson, 'free') %} checked="checked" {% endif %}> {{'免费课时'|trans}}#}
+              {#<span data-toggle="popover" class="glyphicon glyphicon-question-sign color-gray text-sm js-free-lesson-data-popover"></span>#}
+              {#<div class="popover-content hidden">#}
+                {#<div class="popover-item">#}
+                  {#<div class="content">{{ '若希望未登录用户能观看免费课时，需管理员在【管理后台】-【系统】-【课程设置】-【课程】中开启【免费课时允许未登录用户观看】。'|trans }}</div>#}
+                {#</div>#}
+              {#</div>#}
+            {#</label>#}
+          {#</div>#}
+        {#</div>#}
       </div>
     </div>
   </div>
