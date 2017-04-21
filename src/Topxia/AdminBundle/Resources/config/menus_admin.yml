@@ -256,29 +256,29 @@ admin:
                             name: 课程推荐
                         admin_course_data:
                             name: 课程统计
-                admin_open_course_manage:
-                    name: 公开课管理
-                    router_name: admin_open_course
-                    children:
-                        admin_open_course:
-                            name: 公开课管理
-                            disable: true
-                            router_name: admin_open_course
-                        admin_open_course_recommend_list:
-                            name: 公开课推荐
-                            disable: true
-                        admin_opencourse_analysis:
-                            name: 公开课统计
-                            disable: true
-                admin_live_course:
-                    name: 直播管理
-                    children:
-                        admin_live_course_manage:
-                            name: 直播管理
-                            router_params:
-                                status: coming
-                            router_name: admin_live_course
-                            disable: true
+#                admin_open_course_manage:
+#                    name: 公开课管理
+#                    router_name: admin_open_course
+#                    children:
+#                        admin_open_course:
+#                            name: 公开课管理
+#                            disable: true
+#                            router_name: admin_open_course
+#                        admin_open_course_recommend_list:
+#                            name: 公开课推荐
+#                            disable: true
+#                        admin_opencourse_analysis:
+#                            name: 公开课统计
+#                            disable: true
+#                admin_live_course:
+#                    name: 直播管理
+#                    children:
+#                        admin_live_course_manage:
+#                            name: 直播管理
+#                            router_params:
+#                                status: coming
+#                            router_name: admin_live_course
+#                            disable: true
                 admin_course_thread:
                     name: 话题管理
                     children:
@@ -295,21 +295,21 @@ admin:
                             router_params:
                                 postStatus: unPosted
                             disable: true
-                admin_course_note:
-                    name: 笔记管理
-                    children:
-                        admin_course_note_manage:
-                            name: 笔记管理
-                            router_name: admin_course_note
-                            disable: true
-                admin_course_review:
-                    name: 评价管理
-                    children:
-                        admin_course_review_tab:
-                            name: 课程评价
-                            router_name: admin_review
-                            group: 1
-                            disable: true
+#                admin_course_note:
+#                    name: 笔记管理
+#                    children:
+#                        admin_course_note_manage:
+#                            name: 笔记管理
+#                            router_name: admin_course_note
+#                            disable: true
+#                admin_course_review:
+#                    name: 评价管理
+#                    children:
+#                        admin_course_review_tab:
+#                            name: 课程评价
+#                            router_name: admin_review
+#                            group: 1
+#                            disable: true
                 admin_course_category:
                     name: 分类管理
                     children:
