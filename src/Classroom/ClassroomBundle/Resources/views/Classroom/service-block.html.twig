@@ -6,7 +6,7 @@
   {% for service in services %}
     {% include 'ClassroomBundle:Classroom/Part/Service:' ~ service ~ '.html.twig' with {active:true} %}
   {% endfor %}
-  
+
   {% for service in defaultServices if service not in services %}
     {% include 'ClassroomBundle:Classroom/Part/Service:' ~ service ~ '.html.twig' with {active:false} %}
   {% endfor %}
