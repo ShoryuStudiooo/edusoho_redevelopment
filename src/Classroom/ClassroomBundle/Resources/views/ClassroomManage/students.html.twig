@@ -32,10 +32,10 @@
         </a>
       </li>
 
-      <li class="{% if submenu == 'aduitor' %}active{% endif %}">
-        <a href="{{ path('classroom_manage_aduitor', {id:classroom.id}) }}">{{'旁听生'|trans}}
-        </a>
-      </li>
+      {#<li class="{% if submenu == 'aduitor' %}active{% endif %}">#}
+        {#<a href="{{ path('classroom_manage_aduitor', {id:classroom.id}) }}">{{'旁听生'|trans}}#}
+        {#</a>#}
+      {#</li>#}
 
       <li class="{% if submenu == 'record' %}active{% endif %}">
         <a href="{{ path('classroom_manage_record', {id:classroom.id}) }}">{{ '退出记录'|trans }}
