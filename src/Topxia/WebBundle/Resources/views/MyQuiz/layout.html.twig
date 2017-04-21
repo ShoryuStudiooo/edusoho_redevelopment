@@ -12,7 +12,7 @@
 	<div class="panel-body">
 		<ul class="nav nav-tabs">
 			<li class="{{ myQuizActive|default('') }}"><a href="{{ path('my_quiz') }}">{{'考试记录'|trans}}</a></li>
-			<li class="{{ favoriteActive|default('') }}"><a href="{{ path('my_show_favorite_question') }}">{{'收藏的题目'|trans}}</a></li>
+			{#<li class="{{ favoriteActive|default('') }}"><a href="{{ path('my_show_favorite_question') }}">{{'收藏的题目'|trans}}</a></li>#}
 		</ul>
 		<br>
 		{% block list %}{% endblock %}
