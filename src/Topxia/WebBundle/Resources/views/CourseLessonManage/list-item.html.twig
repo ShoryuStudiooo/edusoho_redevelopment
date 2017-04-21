@@ -41,10 +41,10 @@
       {{'课时'|trans}} <span class="number">{{ lesson.number }}</span>：
     {% endif %}
 
-    {% if lesson.free == 1 %}
-      <span class="label label-success">{{'免费'|trans}}</span>
-    {% elseif course.tryLookable and lesson.type == 'video' and file.storage|default('') == 'cloud' %}
-      <span class="label label-warning mrm">{{'试看'|trans}}</span>{% endif %}
+    {#{% if lesson.free == 1 %}#}
+      {#<span class="label label-success">{{'免费'|trans}}</span>#}
+    {#{% elseif course.tryLookable and lesson.type == 'video' and file.storage|default('') == 'cloud' %}#}
+      {#<span class="label label-warning mrm">{{'试看'|trans}}</span>{% endif %}#}
     {% if lesson.type not in ['text','live','testpaper'] 
       and lesson.mediaSource == 'self'
       and (( lesson.mediaId and not file|default(false)) or not lesson.mediaId) 
