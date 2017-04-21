@@ -1,5 +1,5 @@
 /node_modules
 /vendor
 /.idea
-/app/cache/prod/*
+/app/cache/*
 

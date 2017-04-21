@@ -114,25 +114,26 @@
             <div>
           {% else %}
             <ul class='class-data clearfix {% if classroomMemberLevel and 'auditor' in member.role %}hidden-sm{% else %}two-col{% endif %}'>
-              <li>
+              <li style="width: 100%">
+                  {#恢复时去除style="width: 100%"#}
                 <p><i class="es-icon es-icon-person"></i></p>
                 <p>{{'学员'|trans}}({{classroom.studentNum + classroom.auditorNum }})</p>
               </li>
-              <li>
-                <span class="es-share top">
-                  <a class="dropdown-toggle" href="" data-toggle="dropdown"  aria-labelledby="dropdownMenu1">
-                    <p><i class="es-icon es-icon-share"></i></p>
-                    <p>{{'分享'|trans}}</p>
-                  </a>
-                  {% include 'TopxiaWebBundle:Common:share-dropdown.html.twig' with {type:'classroom'} %} 
-                </span>
-              </li>
-              {% if 'auditor' in member.role and classroomMemberLevel and  classroom.showable %}
-                <li class="hidden-xs color-warning icon-vip" title="会员{{setting("classroom.name")|default("班级")}}" data-content="{% include 'TopxiaWebBundle:Course:Part/normal-header-vip.html.twig' with {courseVip:classroomMemberLevel,userVipStatus:checkMemberLevelResult} %}" data-original-title="会员{{setting("classroom.name")|default("班级")}}">
-                  <i class="es-icon es-icon-crown"></i><br>
-                  {% include 'TopxiaWebBundle:Course:Part/normal-header-vip-link.html.twig' with {userVipStatus:checkMemberLevelResult, level: classroomMemberLevel} %}
-                </li>
-              {% endif %}
+              {#<li>#}
+                {#<span class="es-share top">#}
+                  {#<a class="dropdown-toggle" href="" data-toggle="dropdown"  aria-labelledby="dropdownMenu1">#}
+                    {#<p><i class="es-icon es-icon-share"></i></p>#}
+                    {#<p>{{'分享'|trans}}</p>#}
+                  {#</a>#}
+                  {#{% include 'TopxiaWebBundle:Common:share-dropdown.html.twig' with {type:'classroom'} %}#}
+                {#</span>#}
+              {#</li>#}
+              {#{% if 'auditor' in member.role and classroomMemberLevel and  classroom.showable %}#}
+                {#<li class="hidden-xs color-warning icon-vip" title="会员{{setting("classroom.name")|default("班级")}}" data-content="{% include 'TopxiaWebBundle:Course:Part/normal-header-vip.html.twig' with {courseVip:classroomMemberLevel,userVipStatus:checkMemberLevelResult} %}" data-original-title="会员{{setting("classroom.name")|default("班级")}}">#}
+                  {#<i class="es-icon es-icon-crown"></i><br>#}
+                  {#{% include 'TopxiaWebBundle:Course:Part/normal-header-vip-link.html.twig' with {userVipStatus:checkMemberLevelResult, level: classroomMemberLevel} %}#}
+                {#</li>#}
+              {#{% endif %}#}
             </ul>
           {% endif %}
           {% if 'auditor' in member.role %}
