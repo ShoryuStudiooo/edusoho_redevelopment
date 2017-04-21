@@ -52,11 +52,11 @@
           {% endcache %}
         {% endif %}
 
-        {% if course.parentId == 0 %}
-          {% cache 'course/' ~ course.id ~ '/not/classroom/course/sidebar/recommendClassrooms' 600 %}
-            {{ render(controller('TopxiaWebBundle:Part/Course:recommendClassrooms',{course: course})) }}
-          {% endcache %}
-        {% endif %}
+        {#{% if course.parentId == 0 %}#}
+          {#{% cache 'course/' ~ course.id ~ '/not/classroom/course/sidebar/recommendClassrooms' 600 %}#}
+            {#{{ render(controller('TopxiaWebBundle:Part/Course:recommendClassrooms',{course: course})) }}#}
+          {#{% endcache %}#}
+        {#{% endif %}#}
 
         {% cache 'course/' ~ course.id ~ '/sidebar/teachers' 600 %}
           {{ render(controller('TopxiaWebBundle:Part/Course:teachers',{course: course})) }}
