@@ -18,7 +18,7 @@
 
   {{ header_macro.picture(course, previewLesson) }}
   {{ header_macro.info(course, member, userVipStatus) }}
-  <div class="course-operation clearfix">
+  <div class="course-operation clearfix" style="background:transparent;">
     {% if mobile %}
       <span class="text-sm es-mobile-teacher">
       {% set teacherId = course.teacherIds[0]|default(0) %}
@@ -29,20 +29,20 @@
       </span>
     {% endif %}
     {{ header_macro.student_num(course) }}
-    <ul class="course-data clearfix {% if courseVip and course.parentId == '0' %}active{% endif %}">
-      {{ header_macro.favorite_btn(course, hasFavorited) }}
-      {{ header_macro.share_btn(course) }}
-      {% if courseVip and course.parentId == '0' %}
-      {% if mobile %}
-        {{ header_macro.vip_btn(userVipStatus) }}
-      {% else %}
-          <li class="hidden-xs color-warning icon-vip" title="{{'会员课程'|trans}}" data-content="{% include 'TopxiaWebBundle:Course:Part/normal-header-vip.html.twig' %}">
-            <i class="es-icon es-icon-crown"></i><br>
-            {% include 'TopxiaWebBundle:Course:Part/normal-header-vip-link.html.twig' with {userVipStatus:userVipStatus, level: courseVip} %}
-          </li>
-      {% endif %}
-      {% endif %}
-    </ul>
+    {#<ul class="course-data clearfix {% if courseVip and course.parentId == '0' %}active{% endif %}">#}
+      {#{{ header_macro.favorite_btn(course, hasFavorited) }}#}
+      {#{{ header_macro.share_btn(course) }}#}
+      {#{% if courseVip and course.parentId == '0' %}#}
+      {#{% if mobile %}#}
+        {#{{ header_macro.vip_btn(userVipStatus) }}#}
+      {#{% else %}#}
+          {#<li class="hidden-xs color-warning icon-vip" title="{{'会员课程'|trans}}" data-content="{% include 'TopxiaWebBundle:Course:Part/normal-header-vip.html.twig' %}">#}
+            {#<i class="es-icon es-icon-crown"></i><br>#}
+            {#{% include 'TopxiaWebBundle:Course:Part/normal-header-vip-link.html.twig' with {userVipStatus:userVipStatus, level: courseVip} %}#}
+          {#</li>#}
+      {#{% endif %}#}
+      {#{% endif %}#}
+    {#</ul>#}
     <div class="buy">
       {% if source|default("") == "classroom" %}
         {{ render(controller('TopxiaWebBundle:Part/Course:classroomInfo',{courseId: course.id})) }}
