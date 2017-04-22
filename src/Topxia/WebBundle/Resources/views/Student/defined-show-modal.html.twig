@@ -30,106 +30,106 @@
 			{% endif %}
 		</tr>
 		{% elseif field == 'job' %}
-		<tr>
-			<th width="25%">{{'职业'|trans}}</th>
-			<td>
-				{% if profile.job %}
-					{{ profile.job }}
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th width="25%">{{'职业'|trans}}</th>#}
+			{#<td>#}
+				{#{% if profile.job %}#}
+					{#{{ profile.job }}#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% elseif field == 'company' %}
-		<tr>
-			<th width="25%">{{'公司'|trans}}</th>
-			<td>
-				{% if profile.company %}
-					{{ profile.company }}
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th width="25%">{{'公司'|trans}}</th>#}
+			{#<td>#}
+				{#{% if profile.company %}#}
+					{#{{ profile.company }}#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% elseif field == 'mobile' %}
-		<tr>
-			<th>{{'手机号码'|trans}}</th>
-			<td>
-				{% if profile.mobile %}
-					{{ profile.mobile }}
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th>{{'手机号码'|trans}}</th>#}
+			{#<td>#}
+				{#{% if profile.mobile %}#}
+					{#{{ profile.mobile }}#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% elseif field == 'title' %}
-		<tr>
-			<th>{{'头衔'|trans}}</th>
-			<td>
-				{% if profile.title %}
-					{{ profile.title }}
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th>{{'头衔'|trans}}</th>#}
+			{#<td>#}
+				{#{% if profile.title %}#}
+					{#{{ profile.title }}#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% elseif field == 'signature' %}
-		<tr>
-			<th>{{'个人签名'|trans}}</th>
-			<td>
-				{% if profile.signature %}
-					{{ profile.signature }}
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th>{{'个人签名'|trans}}</th>#}
+			{#<td>#}
+				{#{% if profile.signature %}#}
+					{#{{ profile.signature }}#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% elseif field == 'about' %}
-		<tr>
-			<th>{{'自我介绍'|trans}}</th>
-			<td>
-				{% if profile.about %}
-					<div class="editor-text">
-					{{ profile.about }}
-					</div>
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th>{{'自我介绍'|trans}}</th>#}
+			{#<td>#}
+				{#{% if profile.about %}#}
+					{#<div class="editor-text">#}
+					{#{{ profile.about }}#}
+					{#</div>#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% elseif field == 'weibo' %}
-		<tr>
-			<th>{{'微博'|trans}}</th>
-			<td>
-				{% if profile.weibo %}
-					{{ profile.weibo }}
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th>{{'微博'|trans}}</th>#}
+			{#<td>#}
+				{#{% if profile.weibo %}#}
+					{#{{ profile.weibo }}#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% elseif field == 'weixin' %}
-		<tr>
-			<th>{{'微信'|trans}}</th>
-			<td>
-				{% if profile.weixin %}
-					{{ profile.weixin }}
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th>{{'微信'|trans}}</th>#}
+			{#<td>#}
+				{#{% if profile.weixin %}#}
+					{#{{ profile.weixin }}#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% elseif field == 'qq' %}
-		<tr>
-			<th>QQ</th>
-			<td>
-				{% if profile.qq %}
-					{{ profile.qq }}
-				{% else %}
-					{{'暂无'|trans}}
-				{% endif %}
-			</td>
-		</tr>
+		{#<tr>#}
+			{#<th>QQ</th>#}
+			{#<td>#}
+				{#{% if profile.qq %}#}
+					{#{{ profile.qq }}#}
+				{#{% else %}#}
+					{#{{'暂无'|trans}}#}
+				{#{% endif %}#}
+			{#</td>#}
+		{#</tr>#}
 		{% endif %}
 	{% for userField in userFields %}
 		{% if field == userField.fieldName %}
