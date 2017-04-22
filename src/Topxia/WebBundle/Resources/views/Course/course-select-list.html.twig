@@ -23,23 +23,23 @@
     </a>
     <div class="course-body">
       <div style="float:right;" class="text-muted mrm mls">
-        {% if setting('coin.coin_enabled') and setting('coin.price_type') == 'Coin' %}
-          <span class="course-price" style="display:inline">
-            {% if course.price > 0 %}
-               {{'价格：'|trans}} {{ course.price * setting('coin.cash_rate')}}{{setting('coin.coin_name')}}
-            {% else %}
-              {{'免费'|trans}}
-            {% endif %}
-          </span>
-        {% else %}
-          <span class="course-price">
-            {% if course.price > 0 %}
-               {{'价格 : %price%元'|trans({'%price%': course.price })}}
-            {% else %}
-              {{'免费'|trans}}
-            {% endif %}
-          </span>
-        {% endif %}
+        {#{% if setting('coin.coin_enabled') and setting('coin.price_type') == 'Coin' %}#}
+          {#<span class="course-price" style="display:inline">#}
+            {#{% if course.price > 0 %}#}
+               {#{{'价格：'|trans}} {{ course.price * setting('coin.cash_rate')}}{{setting('coin.coin_name')}}#}
+            {#{% else %}#}
+              {#{{'免费'|trans}}#}
+            {#{% endif %}#}
+          {#</span>#}
+        {#{% else %}#}
+          {#<span class="course-price">#}
+            {#{% if course.price > 0 %}#}
+               {#{{'价格 : %price%元'|trans({'%price%': course.price })}}#}
+            {#{% else %}#}
+              {#{{'免费'|trans}}#}
+            {#{% endif %}#}
+          {#</span>#}
+        {#{% endif %}#}
 
         {% if setting('course.show_student_num_enabled', '1') == 1 %}
           <span class="divider"></span>
