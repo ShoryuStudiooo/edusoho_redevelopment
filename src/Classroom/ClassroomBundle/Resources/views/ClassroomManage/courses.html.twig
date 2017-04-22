@@ -45,25 +45,25 @@
                         <button class="close delete-btn pull-right mrl mts mll" data-role="item-delete" type="button" title="{{'删除'|trans}}" style="font-size:35px;" data-id="{{course.id}}">× </button>
                     <div class="course-body">
                      <div style="float:right;" class="text-muted mrm mls">
-                        {% if setting('coin.coin_enabled') and setting('coin.price_type') == 'Coin' %}
-                            <span class="course-price course-price-{{course.id}}" style="display:inline" data-price="{{ course.price * setting('coin.cash_rate')}}">
-                              {% if course.price > 0 %}
-                                {{ course.price * setting('coin.cash_rate')}}
-                                {{setting('coin.coin_name')}}
-                              {% else %}
-                                {{'免费'|trans}}
-                              {% endif %}
-                            </span>
+                        {#{% if setting('coin.coin_enabled') and setting('coin.price_type') == 'Coin' %}#}
+                            {#<span class="course-price course-price-{{course.id}}" style="display:inline" data-price="{{ course.price * setting('coin.cash_rate')}}">#}
+                              {#{% if course.price > 0 %}#}
+                                {#{{ course.price * setting('coin.cash_rate')}}#}
+                                {#{{setting('coin.coin_name')}}#}
+                              {#{% else %}#}
+                                {#{{'免费'|trans}}#}
+                              {#{% endif %}#}
+                            {#</span>#}
 
-                        {% else %}
-                          <span class="course-price course-price-{{course.id}}" data-price="{{ course.price }}">
-                            {% if course.price > 0 %}
-                              {{ course.price }} {{'元'|trans}}
-                            {% else %}
-                              {{'免费'|trans}}
-                            {% endif %}
-                          </span>
-                        {% endif %}
+                        {#{% else %}#}
+                          {#<span class="course-price course-price-{{course.id}}" data-price="{{ course.price }}">#}
+                            {#{% if course.price > 0 %}#}
+                              {#{{ course.price }} {{'元'|trans}}#}
+                            {#{% else %}#}
+                              {#{{'免费'|trans}}#}
+                            {#{% endif %}#}
+                          {#</span>#}
+                        {#{% endif %}#}
                       </div>
 
                       <h4 class="course-title"><a href="{{ path('course_show', {id:course.id}) }}" target="_blank">{{ course.title }}</a>
@@ -144,23 +144,23 @@
           <div class="alert alert-warning pull-right">{{'若%name%课程被移除，则该课程内所有学习数据将被清空。'|trans({'%name%':setting('classroom.name')|default('班级'|trans)})}}</div>
           <div class="form-group">
             <div class="col-md-offset-9 col-md-3 controls">
-              <div class="mbl pull-right">{{'共计:'|trans}} &nbsp; &nbsp;
-                  {% if setting('coin.coin_enabled') and setting('coin.price_type') == 'Coin' %}
-                    <span class="price" style="display:inline">
+              {#<div class="mbl pull-right">{{'共计:'|trans}} &nbsp; &nbsp;#}
+                  {#{% if setting('coin.coin_enabled') and setting('coin.price_type') == 'Coin' %}#}
+                    {#<span class="price" style="display:inline">#}
 
-                        <span  id="price">{{ coinPrice }}</span>{{setting('coin.coin_name')}}
+                        {#<span  id="price">{{ coinPrice }}</span>{{setting('coin.coin_name')}}#}
 
-                    </span>
+                    {#</span>#}
 
-                  {% else %}
-                    <span class="price">
+                  {#{% else %}#}
+                    {#<span class="price">#}
 
-                        <span id="price">{{ price }}</span>{{'元'|trans}}
-                      
-                    </span>
-                  {% endif %}
-  
-              </div>
+                        {#<span id="price">{{ price }}</span>{{'元'|trans}}#}
+                      {##}
+                    {#</span>#}
+                  {#{% endif %}#}
+  {##}
+              {#</div>#}
 
               <button type="submit" class="btn btn-fat btn-primary pull-right">{{'保存修改'|trans}}</button>
 
