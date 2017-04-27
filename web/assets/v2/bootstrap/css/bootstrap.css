@@ -1086,12 +1086,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #46c37b;
+  color: #e1483d;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #2e8e57;
+  color: #a3332b;
   text-decoration: none;
 }
 a:focus {
@@ -3649,7 +3649,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #46c37b;
+  background-color: #E1483D;
 }
 .nav-stacked > li {
   float: none;
@@ -3661,7 +3661,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-justified {
   width: 100%;
 }
-.nav-justified > li {
+.nav-ju
+stified > li {
   float: none;
 }
 .nav-justified > li > a {
