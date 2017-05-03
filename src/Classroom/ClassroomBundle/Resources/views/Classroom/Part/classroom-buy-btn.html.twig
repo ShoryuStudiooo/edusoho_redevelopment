@@ -48,7 +48,7 @@
           data-placement="top"
           title="{{'您之前已购买了本%name%的所有收费课程，可免费学习！'|trans({'%name%':setting('classroom.name')|default('班级'|trans)})}}"
           {% endif %}
-        >{{'免费加入'|trans}}</a>
+        >{{'马上加入'|trans}}</a>
       {% else %}
       <button type="button" style="pointer-events:auto" class="btn btn-default disabled btn-lg" data-toggle="tooltip" data-placement="top" title="{{'该%name%无法在线购买，若需帮助请联系客服'|trans({'%name%':setting('classroom.name')|default('班级'|trans)})}}">{{'无法购买'|trans}}</button>
       {% endif %}
