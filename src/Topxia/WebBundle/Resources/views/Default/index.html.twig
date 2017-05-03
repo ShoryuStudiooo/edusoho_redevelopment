@@ -41,7 +41,7 @@
       {% elseif code != 'footer-link'%}
         {% if code != 'course-grid-with-condition-index'%}
           {% cache 'jianmo/default/' ~ code 600 %}
-            {% include 'TopxiaWebBundle:Default:' ~ code ~ '.html.twig' with {config:config, category: category} %}
+            {#{% include 'TopxiaWebBundle:Default:' ~ code ~ '.html.twig' with {config:config, category: category} %}#}
           {% endcache %}
         {% else %}
           {% include 'TopxiaWebBundle:Default:' ~ code ~ '.html.twig' with {config:config, category: category} %}
