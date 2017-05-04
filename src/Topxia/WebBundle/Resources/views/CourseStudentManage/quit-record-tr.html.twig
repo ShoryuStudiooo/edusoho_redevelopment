@@ -12,22 +12,22 @@
   <td style="vertical-align: middle;">
       {{ refund.createdTime|date('Y-n-d H:i') }}
   </td>
-  {% if refund.actualAmount == 0 %}
-  <td style="vertical-align: middle;">
-    --
-  </td>
-  <td style="vertical-align: middle;">
-    --
-  </td>
-  {% else %}
-  <td style="vertical-align: middle;">
-    {% if refund.status == 'success' %}
-      {{'退款成功'|trans}}
-    {% elseif refund.status == 'failed' %}
-      {{'退款失败'|trans}}
-    {% elseif refund.status == 'cancelled' %}
-      {{'退款取消'|trans}}
-    {% endif %}
+  {#{% if refund.actualAmount == 0 %}#}
+  {#<td style="vertical-align: middle;">#}
+    {#--#}
+  {#</td>#}
+  {#<td style="vertical-align: middle;">#}
+    {#--#}
+  {#</td>#}
+  {#{% else %}#}
+  {#<td style="vertical-align: middle;">#}
+    {#{% if refund.status == 'success' %}#}
+      {#{{'退款成功'|trans}}#}
+    {#{% elseif refund.status == 'failed' %}#}
+      {#{{'退款失败'|trans}}#}
+    {#{% elseif refund.status == 'cancelled' %}#}
+      {#{{'退款取消'|trans}}#}
+    {#{% endif %}#}
   <td style="vertical-align: middle;">
     {{ refund.actualAmount }}
   </td>
