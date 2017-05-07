@@ -286,15 +286,15 @@ admin:
                             name: 课程话题
                             router_name: admin_thread
                             disable: true
-                admin_course_question:
-                    name: 问答管理
-                    children:
-                        admin_course_question_manage:
-                            name: 问答管理
-                            router_name: admin_question
-                            router_params:
-                                postStatus: unPosted
-                            disable: true
+#                admin_course_question:
+#                    name: 问答管理
+#                    children:
+#                        admin_course_question_manage:
+#                            name: 问答管理
+#                            router_name: admin_question
+#                            router_params:
+#                                postStatus: unPosted
+#                            disable: true
 #                admin_course_note:
 #                    name: 笔记管理
 #                    children:
