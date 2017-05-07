@@ -38,10 +38,10 @@
           </li>
 
 
-          <li class="list-group-item {% if side_nav == 'my-teaching-questions' %}active {% endif %}">
-            <a href="{{path('my_teaching_threads', {type:'question'}) }}">{% if setting('default.user_name') %}{{setting('default.user_name')|default('学员'|trans)}}{% else %}{{'学员'|trans}}{% endif %}{{'问答'|trans}}
-            </a>
-          </li>
+          {#<li class="list-group-item {% if side_nav == 'my-teaching-questions' %}active {% endif %}">#}
+            {#<a href="{{path('my_teaching_threads', {type:'question'}) }}">{% if setting('default.user_name') %}{{setting('default.user_name')|default('学员'|trans)}}{% else %}{{'学员'|trans}}{% endif %}{{'问答'|trans}}#}
+            {#</a>#}
+          {#</li>#}
           <li class="list-group-item {% if side_nav == 'my-teaching-discussions' %} active {% endif %}">
             <a href="{{path('my_teaching_threads', {type:'discussion'}) }}">{% if setting('default.user_name') %}{{setting('default.user_name')|default('学员'|trans)}}{% else %}{{'学员'|trans}}{% endif %}{{'话题'|trans}}</a>
           </li>
@@ -82,10 +82,10 @@
         {#</li>#}
         {#{% endif %}#}
 
-        <li class="list-group-item
-        {% if side_nav == 'my-questions' %} active {% endif %}" >
-          <a href="{{path('my_questions')}}">{{'我的问答'|trans}}</a>
-        </li>
+        {#<li class="list-group-item#}
+        {#{% if side_nav == 'my-questions' %} active {% endif %}" >#}
+          {#<a href="{{path('my_questions')}}">{{'我的问答'|trans}}</a>#}
+        {#</li>#}
         <li class="list-group-item
         {% if side_nav == 'my-discussions' %} active {% endif %}">
           <a href="{{path('my_discussions')}}">{{'我的话题'|trans}}</a>
