@@ -35,12 +35,12 @@ admin:
                                     name: '添加新用户'
                                     mode: modal
                                     group: topBtn
-                                admin_user_edit:
-                                    name: '编辑用户信息'
-                                    mode: modal
-                                    group: groupButton
-                                    router_params:
-                                        id: (user.id)
+#                                admin_user_edit:
+#                                    name: '编辑用户信息'
+#                                    mode: modal
+#                                    group: groupButton
+#                                    router_params:
+#                                        id: (user.id)
                                 admin_user_roles:
                                     name: '设置用户组'
                                     mode: modal
